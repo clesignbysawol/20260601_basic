@@ -1,0 +1,1112 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>7조의 MacBook Pro</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page">
+  
+  <!-- FEATURE: COMMON_SHELL START / 담당: 가은 / 공통 홈 구조 -->
+  <header class="topbar">
+    <div class="toolbar-left">
+      <span class="traffic" aria-hidden="true"><i></i><i></i><i></i></span>
+      <nav class="toolbar-nav" aria-label="페이지 이동">
+        <span class="tool-button off"><i class="chevron"></i></span>
+        <span class="tool-button off"><i class="chevron right"></i></span>
+      </nav>
+      <a class="tool-button" href="index.html" aria-label="홈"><i class="home-mark"></i></a>
+    </div>
+    <a class="guest-link" href="#comments"><i class="message-mark"></i>방명록</a>
+  </header>
+
+  <main class="home-stage">
+    <section class="folder-grid" aria-label="팀원 폴더">
+      <a class="folder" href="html_team/eunchan.html">
+        <svg class="folder-art" viewBox="0 0 176 144" aria-hidden="true">
+          <defs><linearGradient id="folder-blue" x2="1" y2="1"><stop stop-color="#00b7ff" stop-opacity=".9"/><stop offset=".5" stop-color="#00b7ff"/><stop offset="1" stop-color="#00b7ff" stop-opacity=".8"/></linearGradient></defs>
+          <path fill="url(#folder-blue)" d="M8 20V136c0 4 2 8 6 8h148c4 0 6-4 6-8V28c0-4-2-8-6-8H72L64 8c-2-4-6-8-10-8H14c-4 0-6 4-6 8v12Z"/>
+          <path fill="#00b7ff" opacity=".65" d="M8 8v12h56l8-12c0-2-2-4-4-4H14c-4 0-6 2-6 4Z"/>
+          <path fill="#fff" opacity=".1" d="M12 24v116c0 1 .5 2 1 2h150c.5 0 1-1 1-2V24H12Z"/>
+        </svg><span class="folder-name">은찬</span>
+      </a>
+      <a class="folder" href="html_team/jimin.html">
+        <svg class="folder-art" viewBox="0 0 176 144" aria-hidden="true">
+          <defs><linearGradient id="folder-yellow" x2="1" y2="1"><stop stop-color="#ffff00" stop-opacity=".9"/><stop offset=".5" stop-color="#ffff00"/><stop offset="1" stop-color="#ffff00" stop-opacity=".8"/></linearGradient></defs>
+          <path fill="url(#folder-yellow)" d="M8 20V136c0 4 2 8 6 8h148c4 0 6-4 6-8V28c0-4-2-8-6-8H72L64 8c-2-4-6-8-10-8H14c-4 0-6 4-6 8v12Z"/>
+          <path fill="#ffff00" opacity=".65" d="M8 8v12h56l8-12c0-2-2-4-4-4H14c-4 0-6 2-6 4Z"/>
+          <path fill="#fff" opacity=".1" d="M12 24v116c0 1 .5 2 1 2h150c.5 0 1-1 1-2V24H12Z"/>
+        </svg><span class="folder-name">지민</span>
+      </a>
+      <a class="folder" href="html_team/hayoung.html">
+        <svg class="folder-art" viewBox="0 0 176 144" aria-hidden="true">
+          <defs><linearGradient id="folder-cyan" x2="1" y2="1"><stop stop-color="#0cdfff" stop-opacity=".9"/><stop offset=".5" stop-color="#0cdfff"/><stop offset="1" stop-color="#0cdfff" stop-opacity=".8"/></linearGradient></defs>
+          <path fill="url(#folder-cyan)" d="M8 20V136c0 4 2 8 6 8h148c4 0 6-4 6-8V28c0-4-2-8-6-8H72L64 8c-2-4-6-8-10-8H14c-4 0-6 4-6 8v12Z"/>
+          <path fill="#0cdfff" opacity=".65" d="M8 8v12h56l8-12c0-2-2-4-4-4H14c-4 0-6 2-6 4Z"/>
+          <path fill="#fff" opacity=".1" d="M12 24v116c0 1 .5 2 1 2h150c.5 0 1-1 1-2V24H12Z"/>
+        </svg><span class="folder-name">하영</span>
+      </a>
+      <a class="folder" href="html_team/gaeun.html">
+        <svg class="folder-art" viewBox="0 0 176 144" aria-hidden="true">
+          <defs><linearGradient id="folder-red" x2="1" y2="1"><stop stop-color="#ff4f4f" stop-opacity=".9"/><stop offset=".5" stop-color="#ff4f4f"/><stop offset="1" stop-color="#ff4f4f" stop-opacity=".8"/></linearGradient></defs>
+          <path fill="url(#folder-red)" d="M8 20V136c0 4 2 8 6 8h148c4 0 6-4 6-8V28c0-4-2-8-6-8H72L64 8c-2-4-6-8-10-8H14c-4 0-6 4-6 8v12Z"/>
+          <path fill="#ff4f4f" opacity=".65" d="M8 8v12h56l8-12c0-2-2-4-4-4H14c-4 0-6 2-6 4Z"/>
+          <path fill="#fff" opacity=".1" d="M12 24v116c0 1 .5 2 1 2h150c.5 0 1-1 1-2V24H12Z"/>
+        </svg><span class="folder-name">가은</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="dock">
+    <div class="dock-inner">
+      <a class="dock-app" href="#gallery">
+        <span class="label">갤러리</span>
+        <span class="photos-icon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+      </a>
+      <a class="dock-app" href="#calendar">
+        <span class="label">캘린더</span>
+        <span class="calendar-icon">25</span>
+      </a>
+      <a class="dock-app memo" href="#memo">
+        <span class="label">메모</span><span class="memo-icon">≡</span>
+      </a>
+    </div>
+  </footer>
+  <!-- FEATURE: COMMON_SHELL END / 담당: 가은 / 공통 홈 구조 -->
+
+  <!-- FEATURE: GALLERY START / 담당: 은찬 / 전체 이미지 갤러리 -->
+  <section class="modal" id="gallery" aria-label="갤러리">
+    <a class="modal-backdrop-close" href="#" aria-label="창 닫기"></a>
+    <div class="modal-window">
+      <div class="modal-titlebar">
+        <span class="traffic"><i></i><i></i><i></i></span>
+        <p class="modal-title">갤러리</p>
+        <a class="modal-close" href="#">×</a>
+      </div>
+      <div class="modal-body">
+        <aside class="sidebar">
+          <div class="sidebar-head"><p class="eyebrow">Photos</p><h3>우리의 순간들</h3><p class="sidebar-hint">총 6장</p></div>
+          <nav class="side-links"><a class="active" href="#gallery">▣ 전체 사진</a><a href="#gallery-work">◷ 작업 과정</a></nav>
+        </aside>
+        <div class="panel">
+          <header class="section-header">
+            <p class="eyebrow">Team Archive</p>
+            <h2>우리의 순간들</h2>
+            <p>7조가 한 모든 기록을 사진으로 남기기. (6장)</p>
+          </header>
+          <div class="photo-grid">
+            <article class="photo-card">
+              <!-- 사진 클릭 시 CSS-only 확대 화면으로 이동합니다. -->
+              <a class="photo-open" href="#image-home-001" aria-label="팀 회의 크게 보기">
+                <img src="https://i.ifh.cc/1tW5v2.jpg" alt="팀 회의">
+              </a>
+              <div class="photo-caption">
+                <b>팀 회의</b>
+                <small>서로 의견을 나누는 유익한 시간을 보내봐요</small>
+              </div>
+            </article>
+            <article class="photo-card">
+              <!-- 사진 클릭 시 CSS-only 확대 화면으로 이동합니다. -->
+              <a class="photo-open" href="#image-home-002" aria-label="자기소개작성 크게 보기">
+                <img src="https://i.ifh.cc/yonkZM.jpg" alt="협업 과정">
+              </a>
+              <div class="photo-caption">
+                <b>자기소개작성</b>
+                <small>서로를 소개하기 위해 글을 쓰고 댓글도 달아봐요</small>
+              </div>
+            </article>
+            <article class="photo-card">
+              <!-- 사진 클릭 시 CSS-only 확대 화면으로 이동합니다. -->
+              <a class="photo-open" href="#image-home-003" aria-label="귀염 그림들 크게 보기">
+                <img src="https://i.ifh.cc/3KXXFR.jpg" alt="팀워크">
+              </a>
+              <div class="photo-caption">
+                <b>귀염 그림들</b>
+                <small>웹에 들어갈 그림들을 직접 그려봐요</small>
+              </div>
+            </article>
+            <article class="photo-card">
+              <!-- 사진 클릭 시 CSS-only 확대 화면으로 이동합니다. -->
+              <a class="photo-open" href="#image-home-004" aria-label="특훈받기 크게 보기">
+                <img src="https://i.ifh.cc/CCAhP1.jpg" alt="디벨롭">
+              </a>
+              <div class="photo-caption">
+                <b>특훈받기</b>
+                <small>진실의 방에서 특훈을 받아봐요. ^ ㅁ ^ 저 날을 기점으로 팀원 모두가 구조를 깨닫고 각성했어요</small>
+              </div>
+            </article>
+            <article class="photo-card">
+              <!-- 사진 클릭 시 CSS-only 확대 화면으로 이동합니다. -->
+              <a class="photo-open" href="#image-home-005" aria-label="702a로 따라와 크게 보기">
+                <img src="https://i.ifh.cc/taDlxr.jpg" alt="디벨롭 2">
+              </a>
+              <div class="photo-caption">
+                <b>702a로 따라와</b>
+                <small>은찬이 수업이 끝나고 가은에게 피드백과 구조이해 특강을 받고, 집에 가는 찰나에 지민님을 마주쳤어요. 그 뒤로 지민과 하영도 차례대로 조장님께 특훈을 받았어요</small>
+              </div>
+            </article>
+            <article class="photo-card">
+              <!-- 사진 클릭 시 CSS-only 확대 화면으로 이동합니다. -->
+              <a class="photo-open" href="#image-home-006" aria-label="모여서 작업하기 크게 보기">
+                <img src="https://i.ifh.cc/06D6R8.jpg" alt="브리핑 및 피드백.and 수정">
+              </a>
+              <div class="photo-caption">
+                <b>모여서 작업하기</b>
+                <small>강의시간에 다같이 모여서 각자 진행상황을 브리핑하고, 피드백를 줬어요. 그 뒤로 수다를 떨며 서로를 알아갔어요 (빵 같은 빵은 아직도 몾 잊어요)</small>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="modal" id="gallery-work" aria-label="갤러리 작업 과정">
+    <a class="modal-backdrop-close" href="#" aria-label="창 닫기"></a>
+    <div class="modal-window">
+      <div class="modal-titlebar">
+        <span class="traffic"><i></i><i></i><i></i></span>
+        <p class="modal-title">갤러리</p>
+        <a class="modal-close" href="#">×</a>
+      </div>
+      <div class="modal-body">
+        <aside class="sidebar">
+          <div class="sidebar-head">
+            <p class="eyebrow">Photos</p>
+            <h3>우리의 순간들</h3>
+            <p class="sidebar-hint">총 7장</p>
+          </div>
+          <nav class="side-links"><a href="#gallery">▣ 전체 사진</a>
+            <a class="active" href="#gallery-work">◷ 작업 과정</a></nav>
+        </aside>
+        <div class="panel"><header class="section-header">
+            <p class="eyebrow">Process</p>
+            <h2>작업 과정</h2>
+            <p>아이디어가 결과물이 되어 가는 순간들. (7장)</p>
+          </header><div class="photo-grid">
+            <article class="photo-card">
+              <!-- 사진 클릭 시 CSS-only 확대 화면으로 이동합니다. -->
+              <a class="photo-open" href="#image-home-007" aria-label="첫걸음 크게 보기">
+                <img src="https://i.ifh.cc/8R1F1d.jpg" alt="협업 과정">
+              </a>
+              <div class="photo-caption">
+                <b>첫걸음</b>
+                <small>뛰어난 조장님을 만나 초반 구성부터 완벽했어요</small>
+              </div>
+            </article>
+            <article class="photo-card">
+              <!-- 사진 클릭 시 CSS-only 확대 화면으로 이동합니다. -->
+              <a class="photo-open" href="#image-home-008" aria-label="코딩과 친해지기 크게 보기">
+                <img src="https://i.ifh.cc/zdXLJx.jpg" alt="브레인스토밍">
+              </a>
+              <div class="photo-caption">
+                <b>코딩과 친해지기</b>
+                <small>피그마메이크를 이용하여 웹사이트 구상을 잡았어요+말 진짜 안들음--</small>
+              </div>
+            </article>
+            <article class="photo-card">
+              <!-- 사진 클릭 시 CSS-only 확대 화면으로 이동합니다. -->
+              <a class="photo-open" href="#image-home-009" aria-label="마무리 준비하기 크게 보기">
+                <img src="https://i.ifh.cc/wh3kx0.png" alt="아이디어 공유">
+              </a>
+              <div class="photo-caption">
+                <b>마무리 준비하기</b>
+                <small>최종 PT날이 몇주 안남았어요,발표 어떻게 할지 미리 정해봤어요</small>
+              </div>
+            </article>
+            <article class="photo-card">
+              <!-- 사진 클릭 시 CSS-only 확대 화면으로 이동합니다. -->
+              <a class="photo-open" href="#image-home-010" aria-label="개인작업모습-가은 크게 보기">
+                <img src="https://i.ifh.cc/opRMpX.jpg" alt="가은 작업 모습">
+              </a>
+              <div class="photo-caption">
+                <b>개인작업모습-가은</b>
+                <small> 맥북을 상대로 꾹꾹이를 해보아요</small>
+              </div>
+            </article>
+            <article class="photo-card">
+              <!-- 사진 클릭 시 CSS-only 확대 화면으로 이동합니다. -->
+              <a class="photo-open" href="#image-home-011" aria-label="개인작업모습-은찬 크게 보기">
+                <img src="https://i.ifh.cc/vgmLwn.jpg" alt="은찬 작업 모습">
+              </a>
+              <div class="photo-caption">
+                <b>개인작업모습-은찬</b>
+                <small>이제 꿈에서도 vs코드 화면이 나와요..</small>
+              </div>
+            </article>
+            <article class="photo-card">
+              <!-- 사진 클릭 시 CSS-only 확대 화면으로 이동합니다. -->
+              <a class="photo-open" href="#image-home-012" aria-label="개인작업모습-하영 크게 보기">
+                <img src="https://i.ifh.cc/5QkhSq.jpg" alt="하영 작업 모습">
+              </a>
+              <div class="photo-caption">
+                <b>개인작업모습-하영</b>
+                <small>흐린눈으로..</small>
+              </div>
+            </article>
+            <article class="photo-card">
+              <!-- 사진 클릭 시 CSS-only 확대 화면으로 이동합니다. -->
+              <a class="photo-open" href="#image-home-013" aria-label="개인작업모습-지민 크게 보기">
+                <img src="https://i.ifh.cc/pzpOSk.jpg" alt="지민 작업 모습">
+              </a>
+              <div class="photo-caption">
+                <b>개인작업모습-지민</b>
+                <small>펭귄과 함께 코드를 짜봅시다</small>
+              </div>
+            </article>
+        </div></div>
+      </div>
+    </div>
+  </section>
+  <!-- FEATURE: GALLERY END / 담당: 은찬 / 전체 이미지 갤러리 -->
+
+  <!-- FEATURE: CALENDAR START / 담당: 지민 / 전체 캘린더 -->
+  <!-- =================================================================
+       [PAGE 1] 타임라인 영역 (#calendar)
+       ================================================================= -->
+  <!-- =================================================================
+       [PAGE 1] 타임라인 영역 (#calendar)
+       5월 상세 마일스톤과 6월 구글 캘린더 일정을 결합한 전체 통합본입니다.
+       ================================================================= -->
+<!-- =================================================================
+     [타임라인] 보내주신 원본 코드 그대로 유지 (#calendar)
+     ================================================================= -->
+<section class="modal" id="calendar" aria-label="프로젝트 타임라인">
+    <a class="modal-backdrop-close" href="#" aria-label="창 닫기"></a>
+    <div class="modal-window">
+      <div class="modal-titlebar">
+        <span class="traffic"><i></i><i></i><i></i></span>
+        <p class="modal-title">캘린더</p>
+        <a class="modal-close" href="#">×</a>
+      </div>
+      <div class="modal-body">
+        <aside class="sidebar">
+          <div class="sidebar-head">
+            <p class="eyebrow">Schedule</p>
+            <h3>프로젝트 일정</h3>
+            <p class="sidebar-hint">2026년 5월 · 6월</p>
+          </div>
+          <nav class="side-links">
+            <a class="active" href="#calendar">☰ 타임라인</a>
+            <a href="#calendar-monthly">▦ 월별 보기</a>
+            
+          </nav>
+        </aside>
+        
+        <div class="panel" style="flex: 1 !important; height: 100% !important; max-height: 100% !important; overflow-y: auto !important; box-sizing: border-box; padding-bottom: 60px;">
+          
+          <header class="section-header">
+            <p class="eyebrow">2026 MAY - JUNE</p>
+            <h2>프로젝트 타임라인</h2>
+            <p>구글 캘린더 기반 파트별 상세 마일스톤입니다.</p>
+          </header>
+          
+          <div class="timeline-list" style="display: flex; flex-direction: column; gap: 24px; margin-top: 30px;">
+            
+            <div class="timeline-item" style="display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 1;">01</h3>
+                <span style="font-size: 11px; color: #94a3b8; font-weight: bold; text-transform: uppercase;">MAY</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b;">프로젝트 킥오프</h4>
+                <p style="margin: 0; font-size: 13px; color: #64748b;">팀 구성 및 프로젝트 아이디어 미팅 시작</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 1;">07-08</h3>
+                <span style="font-size: 11px; color: #94a3b8; font-weight: bold; text-transform: uppercase;">MAY</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b;">[디자인] 레퍼런스 보드 구축</h4>
+                <p style="margin: 0; font-size: 13px; color: #64748b;">은찬 중심의 UI/UX 레퍼런스 조사 및 무드보드 완성</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 1;">07</h3>
+                <span style="font-size: 11px; color: #94a3b8; font-weight: bold; text-transform: uppercase;">MAY</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b;">[기획] 기능 정의 완료</h4>
+                <p style="margin: 0; font-size: 13px; color: #64748b;">가은 중심의 프로젝트 핵심 기능 요구사항 정의 및 확정</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 1;">07-11</h3>
+                <span style="font-size: 11px; color: #94a3b8; font-weight: bold; text-transform: uppercase;">MAY</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b;">[기획] 전체 폴더 내용 작성 & 섹션 구성</h4>
+                <p style="margin: 0; font-size: 13px; color: #64748b;">하영, 지민 중심의 전체 페이지 내용 및 와이어프레임 기획 기재</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 1;">08-12</h3>
+                <span style="font-size: 11px; color: #94a3b8; font-weight: bold; text-transform: uppercase;">MAY</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b;">[디자인] 메이커스 시안 제작 및 피드백 반영</h4>
+                <p style="margin: 0; font-size: 13px; color: #64748b;">은찬 중심의 본격적인 메이커스 UI 시안 도출 및 피드백 작업</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 1;">14-16</h3>
+                <span style="font-size: 11px; color: #94a3b8; font-weight: bold; text-transform: uppercase;">MAY</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b;">[디자인] 프롬프팅 최종 마감</h4>
+                <p style="margin: 0; font-size: 13px; color: #64748b;">디자인 에셋 및 프롬프팅 최종 작업 완료</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 1;">16-17</h3>
+                <span style="font-size: 11px; color: #94a3b8; font-weight: bold; text-transform: uppercase;">MAY</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b;">[개발] 브렌치 분담</h4>
+                <p style="margin: 0; font-size: 13px; color: #64748b;">효율적인 깃 관리를 위한 팀원별 기능/브렌치 영역 세부 분할</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 1;">21-23</h3>
+                <span style="font-size: 11px; color: #94a3b8; font-weight: bold; text-transform: uppercase;">MAY</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b;">[디자인] 2차 디자인 공유 및 프로필/밸런스 작업</h4>
+                <p style="margin: 0; font-size: 13px; color: #64748b;">은찬 중심의 2차 디자인 컴포넌트 공유 및 개인 프로필, 밸런스 게임 UI 제작</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 1;">21-23</h3>
+                <span style="font-size: 11px; color: #94a3b8; font-weight: bold; text-transform: uppercase;">MAY</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b;">[개발/기획] 가이드 작업 및 PT 기획</h4>
+                <p style="margin: 0; font-size: 13px; color: #64748b;">개발 가이드 & CSS 공동 작업 및 발표(PT) 수록 내용 구조 구성</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 1;">24</h3>
+                <span style="font-size: 11px; color: #94a3b8; font-weight: bold; text-transform: uppercase;">MAY</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b;">[디자인] 최종 디자인 공유</h4>
+                <p style="margin: 0; font-size: 13px; color: #64748b;">팀 전체 최종 UI/UX 디자인 컴포넌트 패키지 배포 및 마감</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 1;">25-27</h3>
+                <span style="font-size: 11px; color: #94a3b8; font-weight: bold; text-transform: uppercase;">MAY</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b;">[개발] 각 파트 1차 개발 및 브렌치 합병</h4>
+                <p style="margin: 0; font-size: 13px; color: #64748b;">팀원 전체 1차 기능 개발 구현 및 안정적 통합을 위한 소스코드 머지(Merge) 작업</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px; background-color: #f8fafc; padding-left: 8px; border-left: 4px solid #3b82f6;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; color: #2563eb; line-height: 1;">01</h3>
+                <span style="font-size: 11px; color: #3b82f6; font-weight: bold; text-transform: uppercase;">JUNE</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b;">[개발] 파트별 개발 파일 공유</h4>
+                <p style="margin: 0; font-size: 13px; color: #64748b;">각 구현 파트별 코딩 소스코드 추출 및 교차 점검용 파일 릴리즈</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px; background-color: #f8fafc; padding-left: 8px; border-left: 4px solid #3b82f6;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; color: #2563eb; line-height: 1;">03</h3>
+                <span style="font-size: 11px; color: #3b82f6; font-weight: bold; text-transform: uppercase;">JUNE</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b;">[개발] 1차 초안 통합 (머지 완료)</h4>
+                <p style="margin: 0; font-size: 13px; color: #64748b;">분기된 모든 핵심 코딩 파일들을 메인 시스템 브렌치에 병합 및 점검</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px; background-color: #f8fafc; padding-left: 8px; border-left: 4px solid #3b82f6;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; color: #2563eb; line-height: 1;">04</h3>
+                <span style="font-size: 11px; color: #3b82f6; font-weight: bold; text-transform: uppercase;">JUNE</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b;">[디자인/QA] PT 기획 공유 및 최종 점검</h4>
+                <p style="margin: 0; font-size: 13px; color: #64748b;">하영, 지민 중심의 발표 자료 기획 동기화 및 메인 시스템 기능 최종 검수</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px; background-color: #f8fafc; padding-left: 8px; border-left: 4px solid #3b82f6;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; color: #2563eb; line-height: 1;">06</h3>
+                <span style="font-size: 11px; color: #3b82f6; font-weight: bold; text-transform: uppercase;">JUNE</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b;">[디자인] PT 최종 기획 공유</h4>
+                <p style="margin: 0; font-size: 13px; color: #64748b;">팀 전체 구성원 대상 발표 슬라이드 최종 레이아웃 및 뼈대 내용 공유</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px; background-color: #f8fafc; padding-left: 8px; border-left: 4px solid #3b82f6;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; color: #2563eb; line-height: 1;">07</h3>
+                <span style="font-size: 11px; color: #3b82f6; font-weight: bold; text-transform: uppercase;">JUNE</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b;">[개발] 최종 빌드본 파일 공유</h4>
+                <p style="margin: 0; font-size: 13px; color: #64748b;">가은 중심의 전체 소스코드 최종 취합 및 배포용 마스터 파일 패키징</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px; background-color: #f8fafc; padding-left: 8px; border-left: 4px solid #3b82f6;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; color: #2563eb; line-height: 1;">08</h3>
+                <span style="font-size: 11px; color: #3b82f6; font-weight: bold; text-transform: uppercase;">JUNE</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b;">[디자인] PT 전체 시각 디자인 공유</h4>
+                <p style="margin: 0; font-size: 13px; color: #64748b;">은찬 중심의 고도화된 발표 PPT 디자인 템플릿 및 시각화 요소 최종 공유</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px; background-color: #f8fafc; padding-left: 8px; border-left: 4px solid #3b82f6;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; color: #2563eb; line-height: 1;">10</h3>
+                <span style="font-size: 11px; color: #3b82f6; font-weight: bold; text-transform: uppercase;">JUNE</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b;">[PT] 팀 전체 사전 리허설</h4>
+                <p style="margin: 0; font-size: 13px; color: #64748b;">실전 발표 상황을 대비한 대본 매칭, 스피치 타임 체크 및 전체 동선 리허설 진행</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" style="display: flex; padding-bottom: 16px; background-color: #fff7ed; padding-left: 8px; border-left: 4px solid #f97316; border-radius: 4px;">
+              <div class="timeline-date" style="width: 100px; flex-shrink: 0;">
+                <h3 style="margin: 0; font-size: 24px; font-weight: 700; color: #ea580c; line-height: 1;">18</h3>
+                <span style="font-size: 11px; color: #f97316; font-weight: bold; text-transform: uppercase;">JUNE</span>
+              </div>
+              <div class="timeline-content">
+                <h4 style="margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #c2410c;">★ 프로젝트 최종 성과 발표 ★</h4>
+                <p style="margin: 0; font-size: 13px; color: #9a3412; font-weight: 500;">개발된 시스템 시연 및 그간의 프로젝트 최종 마일스톤 성과 발표</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- =================================================================
+     [공통 CSS] 월별 캘린더 그리드 및 상단 화살표 내비게이션 스타일 
+     ================================================================= -->
+<!-- =================================================================
+     [5월 달력 모달] 월별 보기 탭 최초 타겟 페이지 (#calendar-monthly)
+     ================================================================= -->
+<section class="modal" id="calendar-monthly" aria-label="월별 캘린더">
+    <a class="modal-backdrop-close" href="#" aria-label="창 닫기"></a>
+    <div class="modal-window">
+      <div class="modal-titlebar">
+        <span class="traffic"><i></i><i></i><i></i></span>
+        <p class="modal-title">캘린더</p>
+        <a class="modal-close" href="#">×</a>
+      </div>
+      <div class="modal-body">
+        <aside class="sidebar">
+          <div class="sidebar-head">
+            <p class="eyebrow">Schedule</p>
+            <h3>프로젝트 일정</h3>
+            <p class="sidebar-hint">2026년 5월 · 6월</p>
+          </div>
+          <nav class="side-links">
+            <a href="#calendar">☰ 타임라인</a>
+            <a class="active" href="#calendar-monthly">▦ 월별 보기</a>
+            
+          </nav>
+        </aside>
+        
+        <div class="panel" style="flex: 1 !important; height: 100% !important; max-height: 100% !important; overflow-y: auto !important; box-sizing: border-box; padding-bottom: 60px;">
+          
+          <header class="section-header" style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <p class="eyebrow">May 2026</p>
+              <h2 style="display: inline-block; margin: 0; vertical-align: middle;">2026년 5월</h2>
+              <div class="cal-nav">
+                <a href="#" class="cal-btn" style="opacity: 0.3; pointer-events: none;">&lt;</a>
+                <!-- 6월 모달(#calendar-june) 구역으로 화면 점프 연동 -->
+                <a href="#calendar-june" class="cal-btn">&gt;</a>
+              </div>
+            </div>
+            <p style="margin: 0; color: #64748b; font-size: 13px;">스크롤 없이 화살표로 작동합니다.</p>
+          </header>
+          
+          <div class="calendar-grid">
+            <div class="grid-header">금</div>
+            <div class="grid-header">토</div>
+            <div class="grid-header" style="color:#ef4444;">일</div>
+            <div class="grid-header">월</div>
+            <div class="grid-header">화</div>
+            <div class="grid-header">수</div>
+            <div class="grid-header">목</div>
+            
+            <div class="grid-day"><span class="day-label">1</span><span class="mini-badge gray">🥇 킥오프</span></div>
+            <div class="grid-day"><span class="day-label">2</span></div>
+            <div class="grid-day"><span class="day-label">3</span></div>
+            <div class="grid-day"><span class="day-label">4</span></div>
+            <div class="grid-day"><span class="day-label">5</span></div>
+            <div class="grid-day"><span class="day-label">6</span><div class="calendar-event-bar blue">📝 기획 조율 시작 (05.06)</div></div>
+            <div class="grid-day">
+              <span class="day-label">7</span>
+              <div class="calendar-event-bar blue">📝 기획 조율 중</div>
+              <div class="calendar-event-bar dark">🎨 레퍼런스 보드 구축</div>
+              <div class="mini-badge red">📌 기능 정의 완료 (@가은)</div>
+            </div>
+            <div class="grid-day">
+              <span class="day-label">8</span>
+              <div class="calendar-event-bar blue">📝 기획 조율 완료</div>
+              <div class="calendar-event-bar dark">🎨 레퍼런스 보드 완</div>
+              <div class="mini-badge gray">🎨 시안 제작</div>
+            </div>
+            <div class="grid-day"><span class="day-label">9</span><div class="mini-badge gray">🎨 시안 제작</div></div>
+            <div class="grid-day"><span class="day-label">10</span><div class="mini-badge gray">🎨 시안 제작</div></div>
+            <div class="grid-day">
+              <span class="day-label">11</span>
+              <div class="calendar-event-bar orange">📂 폴더작성 마감 완료</div>
+              <div class="mini-badge gray">🎨 피드백 반영</div>
+            </div>
+            <div class="grid-day"><span class="day-label">12</span><div class="mini-badge gray">📄 웹 기재 체크</div><div class="mini-badge gray">🎨 피드백 반영</div></div>
+            <div class="grid-day"><span class="day-label">13</span><span class="mini-badge red">⚠️ 테스트 마감</span></div>
+            <div class="grid-day"><span class="day-label">14</span><div class="calendar-event-bar dark">⚙️ 프롬프팅 시작</div></div>
+            <div class="grid-day"><span class="day-label">15</span><div class="calendar-event-bar dark">⚙️ 프롬프팅 진행</div></div>
+            <div class="grid-day">
+              <span class="day-label">16</span>
+              <div class="calendar-event-bar dark">⚙️ 프롬프팅 최종마감</div>
+              <div class="calendar-event-bar blue">🌿 [개발] 브렌치 분담</div>
+            </div>
+            <div class="grid-day"><span class="day-label">17</span><div class="calendar-event-bar blue">🌿 브렌치 분담 완료</div></div>
+            <div class="grid-day"><span class="day-label">18</span></div>
+            <div class="grid-day"><span class="day-label">19</span></div>
+            <div class="grid-day"><span class="day-label">20</span><span class="mini-badge red">🔍 최종 검수일</span></div>
+            <div class="grid-day">
+              <span class="day-label">21</span>
+              <div class="calendar-event-bar green">🛠️ 가이드&CSS 공동 수립</div>
+              <div class="mini-badge gray">📄 PT 구조 기획</div>
+              <div class="mini-badge gray">🎨 2차 디자인 공유</div>
+            </div>
+            <div class="grid-day"><span class="day-label">22</span><div class="calendar-event-bar green">🛠️ 가이드&CSS 진행</div></div>
+            <div class="grid-day"><span class="day-label">23</span><div class="calendar-event-bar green">🛠️ 가이드 완료 마감</div></div>
+            <div class="grid-day"><span class="day-label">24</span><span class="mini-badge gray">🎨 디자인 패키지 배포</span></div>
+            <div class="grid-day">
+              <span class="day-label">25</span>
+              <div class="calendar-event-bar blue">💻 1차 기능 개발 시작</div>
+              <div class="mini-badge gray">🏁 중간 점검</div>
+            </div>
+            <div class="grid-day"><span class="day-label">26</span><div class="calendar-event-bar blue">💻 1차 기능 개발 진행</div></div>
+            <div class="grid-day">
+              <span class="day-label">27</span>
+              <div class="calendar-event-bar blue">💻 1차 개발 머지 완료</div>
+              <span class="mini-badge red">🚀 1차 빌드 완성</span>
+            </div>
+            <div class="grid-day"><span class="day-label">28</span></div>
+            <div class="grid-day"><span class="day-label">29</span></div>
+            <div class="grid-day"><span class="day-label">30</span></div>
+            <div class="grid-day"><span class="day-label">31</span></div>
+            <div class="grid-day blank"></div>
+            <div class="grid-day blank"></div>
+            <div class="grid-day blank"></div>
+            <div class="grid-day blank"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<!-- =================================================================
+     [6월 달력 모달] 화살표 동작 연동을 위한 전용 독립 타겟 구역 (#calendar-june)
+     ================================================================= -->
+<section class="modal" id="calendar-june" aria-label="6월별 캘린더">
+    <a class="modal-backdrop-close" href="#" aria-label="창 닫기"></a>
+    <div class="modal-window">
+      <div class="modal-titlebar">
+        <span class="traffic"><i></i><i></i><i></i></span>
+        <p class="modal-title">캘린더</p>
+        <a class="modal-close" href="#">×</a>
+      </div>
+      <div class="modal-body">
+        <aside class="sidebar">
+          <div class="sidebar-head">
+            <p class="eyebrow">Schedule</p>
+            <h3>프로젝트 일정</h3>
+            <p class="sidebar-hint">2026년 5월 · 6월</p>
+          </div>
+          <nav class="side-links">
+            <a href="#calendar">☰ 타임라인</a>
+            <!-- 6월 상태에서도 이 버튼 클릭시 메인 달력(5월) 시작점으로 언제든지 초기화 리셋 가능 -->
+            <a class="active" href="#calendar-monthly">▦ 월별 보기</a>
+            
+          </nav>
+        </aside>
+        
+        <div class="panel" style="flex: 1 !important; height: 100% !important; max-height: 100% !important; overflow-y: auto !important; box-sizing: border-box; padding-bottom: 60px;">
+          
+          <header class="section-header" style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <p class="eyebrow">June 2026</p>
+              <h2 style="display: inline-block; margin: 0; vertical-align: middle;">2026년 6월</h2>
+              <div class="cal-nav">
+                <!-- 이전달 화살표 클릭 시 원래 5월 모달(#calendar-monthly) 구역으로 롤백 -->
+                <a href="#calendar-monthly" class="cal-btn">&lt;</a>
+                <a href="#" class="cal-btn" style="opacity: 0.3; pointer-events: none;">&gt;</a>
+              </div>
+            </div>
+            <p style="margin: 0; color: #64748b; font-size: 13px;">1일이 월요일부터 정렬 배치됩니다.</p>
+          </header>
+          
+          <div class="calendar-grid">
+            <div class="grid-header">월</div>
+            <div class="grid-header">화</div>
+            <div class="grid-header">수</div>
+            <div class="grid-header">목</div>
+            <div class="grid-header">금</div>
+            <div class="grid-header">토</div>
+            <div class="grid-header" style="color: #ef4444;">일</div>
+            
+            <div class="grid-day"><span class="day-label">1</span><div class="calendar-event-bar blue">📦 파트별 소스코드 취합</div></div>
+            <div class="grid-day"><span class="day-label">2</span><div class="calendar-event-bar blue">📦 소스코드 통합 및 내부 검토</div></div>
+            <div class="grid-day"><span class="day-label">3</span><div class="calendar-event-bar blue">📦 1차 초안 리허설 준비 완료</div></div>
+            <div class="grid-day">
+              <span class="day-label">4</span>
+              <div class="calendar-event-bar green">📢 PT 시뮬레이션 및 피드백</div>
+              <div class="mini-badge red">✔ 메인 시스템 모니터링</div>
+            </div>
+            <div class="grid-day"><span class="day-label">5</span><div class="calendar-event-bar green">📢 PT 기획서 최종 수정</div></div>
+            <div class="grid-day"><span class="day-label">6</span><div class="calendar-event-bar green">📢 PT 최종 점검 및 마감</div></div>
+            <div class="grid-day"><span class="day-label">7</span><span class="mini-badge gray">💻 마스터본 파일 취합 및 백업</span></div>
+            <div class="grid-day"><span class="day-label">8</span><span class="mini-badge gray">🎨 PPT 디자인 전면 수정 반영</span></div>
+            <div class="grid-day"><span class="day-label">9</span></div>
+            <div class="grid-day"><span class="day-label">10</span><span class="mini-badge red">🎤 전체 사전 리허설 진행</span></div>
+            <div class="grid-day"><span class="day-label">11</span><span class="mini-badge gray">💤 휴강</span></div>
+            <div class="grid-day"><span class="day-label">12</span></div>
+            <div class="grid-day"><span class="day-label">13</span></div>
+            <div class="grid-day"><span class="day-label">14</span></div>
+            <div class="grid-day"><span class="day-label">15</span></div>
+            <div class="grid-day"><span class="day-label">16</span></div>
+            <div class="grid-day"><span class="day-label">17</span></div>
+            <div class="grid-day" style="background-color: #fff7ed;"><span class="day-label" style="color: #ea580c;">18</span><span class="mini-badge red" style="background-color: #ea580c; color: white; text-align: center; font-weight: bold;">🏆 최종 성과 공유</span></div>
+            <div class="grid-day"><span class="day-label">19</span></div>
+            <div class="grid-day"><span class="day-label">20</span></div>
+            <div class="grid-day"><span class="day-label">21</span></div>
+            <div class="grid-day"><span class="day-label">22</span></div>
+            <div class="grid-day"><span class="day-label">23</span></div>
+            <div class="grid-day"><span class="day-label">24</span></div>
+            <div class="grid-day"><span class="day-label">25</span></div>
+            <div class="grid-day"><span class="day-label">26</span></div>
+            <div class="grid-day"><span class="day-label">27</span></div>
+            <div class="grid-day"><span class="day-label">28</span></div>
+            <div class="grid-day"><span class="day-label">29</span></div>
+            <div class="grid-day"><span class="day-label">30</span></div>
+            <div class="grid-day blank"></div>
+            <div class="grid-day blank"></div>
+            <div class="grid-day blank"></div>
+            <div class="grid-day blank"></div>
+            <div class="grid-day blank"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="modal" id="memo" aria-label="메모">
+    <a class="modal-backdrop-close" href="#" aria-label="창 닫기"></a>
+    <div class="modal-window">
+      <div class="modal-titlebar">
+        <span class="traffic"><i></i><i></i><i></i></span>
+        <p class="modal-title">메모</p>
+        <a class="modal-close" href="#">×</a>
+      </div>
+      <div class="modal-body">
+        <aside class="sidebar">
+          <div class="sidebar-head">
+            <p class="eyebrow">Notes</p>
+            <h3>기획 메모</h3>
+            <p class="sidebar-hint">문서 모음</p>
+          </div>
+          <nav class="side-links"><a class="active" href="#memo">▤ 기획안</a>
+            <a href="#memo-meeting">▱ 회의록</a></nav>
+        </aside>
+        <div class="panel"><header class="section-header">
+            <p class="eyebrow">Project Brief</p>
+            <h2>프로젝트 기획안</h2>
+            <p>목표, 기능, 컨셉, 기술 스택을 한눈에 정리했어요.</p>
+          </header>
+          <div class="memo-grid"><article class="memo-card"><h4>◎ 프로젝트 목표</h4><p>팀원 4명의 개인 정보, 사진, 취향, 추억을 아카이브하여 감성적인 디지털 앨범을 제작합니다.</p></article><article class="memo-card"><h4>✦ 주요 기능</h4><ul><li>개인 프로필</li><li>사진 갤러리 30장</li><li>밸런스게임 5개</li><li>플레이리스트 10곡</li><li>방명록</li></ul></article><article class="memo-card"><h4>▧ 디자인 컨셉</h4><p>macOS Big Sur 스타일의 매트한 위젯 감각과 iOS의 감성적인 타이포그래피를 결합했습니다.</p></article><article class="memo-card"><h4>⌘ 기술 스택</h4><ul><li>HTML</li><li>CSS</li><li>CSS :target interactions</li></ul></article></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="modal" id="memo-meeting" aria-label="회의록">
+    <a class="modal-backdrop-close" href="#" aria-label="창 닫기"></a>
+    <div class="modal-window">
+      <div class="modal-titlebar">
+        <span class="traffic"><i></i><i></i><i></i></span>
+        <p class="modal-title">메모</p>
+        <a class="modal-close" href="#">×</a>
+      </div>
+      <div class="modal-body">
+        <aside class="sidebar">
+          <div class="sidebar-head">
+            <p class="eyebrow">Notes</p>
+            <h3>기획 메모</h3>
+            <p class="sidebar-hint">문서 모음</p>
+          </div>
+          <nav class="side-links"><a href="#memo">▤ 기획안</a>
+            <a class="active" href="#memo-meeting">▱ 회의록</a></nav>
+        </aside>
+        <div class="panel"><header class="section-header">
+            <p class="eyebrow">Meeting Minutes</p>
+            <h2>회의록</h2>
+            <p>모든 정기 회의의 안건과 결정사항을 시간순으로 기록했어요.</p>
+          </header>
+          <div class="priority-list"><article class="memo-card"><h4>킥오프 미팅 <small>2026.05.01</small></h4><p>은찬, 하영, 지민, 가은 · 프로젝트 컨셉 합의 / 역할 분담 / 일정 수립</p></article><article class="memo-card"><h4>디자인 리뷰 <small>2026.05.07</small></h4><p>은찬, 하영 · 컬러 팔레트 확정 / 폴더 모티프 결정</p></article><article class="memo-card"><h4>QA 점검 회의 <small>2026.05.13</small></h4><p>전원 · 크리티컬 버그 리뷰 / 런칭 전 체크리스트</p></article></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="modal" id="comments" aria-label="전체 댓글">
+    <a class="modal-backdrop-close" href="#" aria-label="창 닫기"></a>
+    <div class="modal-window small">
+      <div class="modal-titlebar">
+        <span class="traffic"><i></i><i></i><i></i></span>
+        <p class="modal-title">전체 댓글</p>
+        <a class="modal-close" href="#">×</a>
+      </div>
+      <div class="modal-body" style="display:flex;flex-direction:column">
+        <div class="panel"><header class="section-header"><p class="eyebrow">Guestbook</p><h2>모두에게 남긴 한마디</h2></header><div class="empty-state" id="comment-empty">아직 댓글이 없습니다. 처음으로 한마디 남겨보세요.</div><div class="comment-list" id="comment-list" aria-live="polite"></div></div>
+        <form id="comment-form" class="inputbar"><input id="comment-input" type="text" placeholder="댓글을 입력하세요" aria-label="댓글 내용"><button type="submit" class="send-button">↑</button></form>
+      </div>
+    </div>
+  </section>
+  <!-- FEATURE: COMMENTS_INTEGRATION END / 담당: 가은 / 전체 댓글 및 최종 머지 -->
+  <!-- IMAGE_LIGHTBOX_START -->
+  <!-- CSS-only image lightboxes: 사진 카드를 누르면 해당 섹션이 :target으로 열립니다. -->
+  <section class="image-lightbox" id="image-home-001" aria-label="팀 회의 크게 보기">
+    <a class="image-lightbox-backdrop" href="#gallery" aria-label="이미지 닫기"></a>
+    <figure class="image-lightbox-card">
+      <a class="image-lightbox-close" href="#gallery" aria-label="이미지 닫기">×</a>
+      <img src="https://i.ifh.cc/1tW5v2.jpg" alt="팀 회의">
+      <figcaption>
+        <b>팀 회의</b>
+        <small>서로 의견을 나누는 유익한 시간을 보내봐요</small>
+      </figcaption>
+      <a class="image-lightbox-nav image-lightbox-prev" href="#image-home-006" aria-label="이전 사진">◀</a>
+      <a class="image-lightbox-nav image-lightbox-next" href="#image-home-002" aria-label="다음 사진">▶</a>
+    </figure>
+  </section>
+  <section class="image-lightbox" id="image-home-002" aria-label="자기소개작성 크게 보기">
+    <a class="image-lightbox-backdrop" href="#gallery" aria-label="이미지 닫기"></a>
+    <figure class="image-lightbox-card">
+      <a class="image-lightbox-close" href="#gallery" aria-label="이미지 닫기">×</a>
+      <img src="https://i.ifh.cc/yonkZM.jpg" alt="협업 과정">
+      <figcaption>
+        <b>자기소개작성</b>
+        <small>서로를 소개하기 위해 글을 쓰고 댓글도 달아봐요</small>
+      </figcaption>
+      <a class="image-lightbox-nav image-lightbox-prev" href="#image-home-001" aria-label="이전 사진">◀</a>
+      <a class="image-lightbox-nav image-lightbox-next" href="#image-home-003" aria-label="다음 사진">▶</a>
+    </figure>
+  </section>
+  <section class="image-lightbox" id="image-home-003" aria-label="귀염 그림들 크게 보기">
+    <a class="image-lightbox-backdrop" href="#gallery" aria-label="이미지 닫기"></a>
+    <figure class="image-lightbox-card">
+      <a class="image-lightbox-close" href="#gallery" aria-label="이미지 닫기">×</a>
+      <img src="https://i.ifh.cc/3KXXFR.jpg" alt="팀워크">
+      <figcaption>
+        <b>귀염 그림들</b>
+        <small>웹에 들어갈 그림들을 직접 그려봐요</small>
+      </figcaption>
+      <a class="image-lightbox-nav image-lightbox-prev" href="#image-home-002" aria-label="이전 사진">◀</a>
+      <a class="image-lightbox-nav image-lightbox-next" href="#image-home-004" aria-label="다음 사진">▶</a>
+    </figure>
+  </section>
+  <section class="image-lightbox" id="image-home-004" aria-label="특훈받기 크게 보기">
+    <a class="image-lightbox-backdrop" href="#gallery" aria-label="이미지 닫기"></a>
+    <figure class="image-lightbox-card">
+      <a class="image-lightbox-close" href="#gallery" aria-label="이미지 닫기">×</a>
+      <img src="https://i.ifh.cc/CCAhP1.jpg" alt="디벨롭">
+      <figcaption>
+        <b>특훈받기</b>
+        <small>진실의 방에서 특훈을 받아봐요.저날을 기점으로 팀원 모두가 구조를 깨닫고 각성했어요</small>
+      </figcaption>
+      <a class="image-lightbox-nav image-lightbox-prev" href="#image-home-003" aria-label="이전 사진">◀</a>
+      <a class="image-lightbox-nav image-lightbox-next" href="#image-home-005" aria-label="다음 사진">▶</a>
+    </figure>
+  </section>
+  <section class="image-lightbox" id="image-home-005" aria-label="702a로 따라와 크게 보기">
+    <a class="image-lightbox-backdrop" href="#gallery" aria-label="이미지 닫기"></a>
+    <figure class="image-lightbox-card">
+      <a class="image-lightbox-close" href="#gallery" aria-label="이미지 닫기">×</a>
+      <img src="https://i.ifh.cc/taDlxr.jpg" alt="디벨롭 2">
+      <figcaption>
+        <b>702a로 따라와</b>
+        <small>은찬이 수업이 끝나고 가은에게 피드백과 구조이해 특강을 받고, 집에 가는 찰나에 지민님을 마주쳤어요.그 뒤로 지민과 하영도 차례대로 조장님께 특훈을 받았어요</small>
+      </figcaption>
+      <a class="image-lightbox-nav image-lightbox-prev" href="#image-home-004" aria-label="이전 사진">◀</a>
+      <a class="image-lightbox-nav image-lightbox-next" href="#image-home-006" aria-label="다음 사진">▶</a>
+    </figure>
+  </section>
+  <section class="image-lightbox" id="image-home-006" aria-label="모여서 작업하기 크게 보기">
+    <a class="image-lightbox-backdrop" href="#gallery" aria-label="이미지 닫기"></a>
+    <figure class="image-lightbox-card">
+      <a class="image-lightbox-close" href="#gallery" aria-label="이미지 닫기">×</a>
+      <img src="https://i.ifh.cc/06D6R8.jpg" alt="브리핑 및 피드백.and 수정">
+      <figcaption>
+        <b>모여서 작업하기</b>
+        <small>강의시간에 다같이 모여서 각자 진행상황을 브리핑하고,피드백를 줬어요. 그 뒤로 수다를 떨며 서로를 알아갔어요(빵 같은 빵은 아직도 몾 잊어요)</small>
+      </figcaption>
+      <a class="image-lightbox-nav image-lightbox-prev" href="#image-home-005" aria-label="이전 사진">◀</a>
+      <a class="image-lightbox-nav image-lightbox-next" href="#image-home-001" aria-label="다음 사진">▶</a>
+    </figure>
+  </section>
+  <section class="image-lightbox" id="image-home-007" aria-label="첫걸음 크게 보기">
+    <a class="image-lightbox-backdrop" href="#gallery-work" aria-label="이미지 닫기"></a>
+    <figure class="image-lightbox-card">
+      <a class="image-lightbox-close" href="#gallery-work" aria-label="이미지 닫기">×</a>
+      <img src="https://i.ifh.cc/8R1F1d.jpg" alt="협업 과정">
+      <figcaption>
+        <b>첫걸음</b>
+        <small>뛰어난 조장님을 만나 초반 구성부터 완벽했어요</small>
+      </figcaption>
+      <a class="image-lightbox-nav image-lightbox-prev" href="#image-home-013" aria-label="이전 사진">◀</a>
+      <a class="image-lightbox-nav image-lightbox-next" href="#image-home-008" aria-label="다음 사진">▶</a>
+    </figure>
+  </section>
+  <section class="image-lightbox" id="image-home-008" aria-label="코딩과 친해지기 크게 보기">
+    <a class="image-lightbox-backdrop" href="#gallery-work" aria-label="이미지 닫기"></a>
+    <figure class="image-lightbox-card">
+      <a class="image-lightbox-close" href="#gallery-work" aria-label="이미지 닫기">×</a>
+      <img src="https://i.ifh.cc/zdXLJx.jpg" alt="브레인스토밍">
+      <figcaption>
+        <b>코딩과 친해지기</b>
+        <small>피그마메이크를 이용하여 웹사이트 구상을 잡았어요+말 진짜 안들음--</small>
+      </figcaption>
+      <a class="image-lightbox-nav image-lightbox-prev" href="#image-home-007" aria-label="이전 사진">◀</a>
+      <a class="image-lightbox-nav image-lightbox-next" href="#image-home-009" aria-label="다음 사진">▶</a>
+    </figure>
+  </section>
+  <section class="image-lightbox" id="image-home-009" aria-label="마무리 준비하기 크게 보기">
+    <a class="image-lightbox-backdrop" href="#gallery-work" aria-label="이미지 닫기"></a>
+    <figure class="image-lightbox-card">
+      <a class="image-lightbox-close" href="#gallery-work" aria-label="이미지 닫기">×</a>
+      <img src="https://i.ifh.cc/wh3kx0.png" alt="아이디어 공유">
+      <figcaption>
+        <b>마무리 준비하기</b>
+        <small>최종 PT날이 몇주 안남았어요,발표 어떻게 할지 미리 정해봤어요</small>
+      </figcaption>
+      <a class="image-lightbox-nav image-lightbox-prev" href="#image-home-008" aria-label="이전 사진">◀</a>
+      <a class="image-lightbox-nav image-lightbox-next" href="#image-home-010" aria-label="다음 사진">▶</a>
+    </figure>
+  </section>
+  <section class="image-lightbox" id="image-home-010" aria-label="개인작업모습-가은 크게 보기">
+    <a class="image-lightbox-backdrop" href="#gallery-work" aria-label="이미지 닫기"></a>
+    <figure class="image-lightbox-card">
+      <a class="image-lightbox-close" href="#gallery-work" aria-label="이미지 닫기">×</a>
+      <img src="https://i.ifh.cc/opRMpX.jpg" alt="가은 작업 모습">
+      <figcaption>
+        <b>개인작업모습-가은</b>
+        <small>맥북을 상대로 꾹꾹이를 해보아요</small>
+      </figcaption>
+      <a class="image-lightbox-nav image-lightbox-prev" href="#image-home-009" aria-label="이전 사진">◀</a>
+      <a class="image-lightbox-nav image-lightbox-next" href="#image-home-011" aria-label="다음 사진">▶</a>
+    </figure>
+  </section>
+  <section class="image-lightbox" id="image-home-011" aria-label="개인작업모습-은찬 크게 보기">
+    <a class="image-lightbox-backdrop" href="#gallery-work" aria-label="이미지 닫기"></a>
+    <figure class="image-lightbox-card">
+      <a class="image-lightbox-close" href="#gallery-work" aria-label="이미지 닫기">×</a>
+      <img src="https://i.ifh.cc/vgmLwn.jpg" alt="은찬 작업 모습">
+      <figcaption>
+        <b>개인작업모습-은찬</b>
+        <small>이제 꿈에서도 vs코드 화면이 나와요..</small>
+      </figcaption>
+      <a class="image-lightbox-nav image-lightbox-prev" href="#image-home-010" aria-label="이전 사진">◀</a>
+      <a class="image-lightbox-nav image-lightbox-next" href="#image-home-012" aria-label="다음 사진">▶</a>
+    </figure>
+  </section>
+  <section class="image-lightbox" id="image-home-012" aria-label="개인작업모습-하영 크게 보기">
+    <a class="image-lightbox-backdrop" href="#gallery-work" aria-label="이미지 닫기"></a>
+    <figure class="image-lightbox-card">
+      <a class="image-lightbox-close" href="#gallery-work" aria-label="이미지 닫기">×</a>
+      <img src="https://i.ifh.cc/5QkhSq.jpg" alt="하영 작업 모습">
+      <figcaption>
+        <b>개인작업모습-하영</b>
+        <small>흐린눈으로..</small>
+      </figcaption>
+      <a class="image-lightbox-nav image-lightbox-prev" href="#image-home-011" aria-label="이전 사진">◀</a>
+      <a class="image-lightbox-nav image-lightbox-next" href="#image-home-013" aria-label="다음 사진">▶</a>
+    </figure>
+  </section>
+  <section class="image-lightbox" id="image-home-013" aria-label="개인작업모습-지민 크게 보기">
+    <a class="image-lightbox-backdrop" href="#gallery-work" aria-label="이미지 닫기"></a>
+    <figure class="image-lightbox-card">
+      <a class="image-lightbox-close" href="#gallery-work" aria-label="이미지 닫기">×</a>
+      <img src="https://i.ifh.cc/pzpOSk.jpg" alt="지민 작업 모습">
+      <figcaption>
+        <b>개인작업모습-지민</b>
+      </figcaption>
+      <a class="image-lightbox-nav image-lightbox-prev" href="#image-home-012" aria-label="이전 사진">◀</a>
+      <a class="image-lightbox-nav image-lightbox-next" href="#image-home-007" aria-label="다음 사진">▶</a>
+    </figure>
+  </section>
+  <!-- IMAGE_LIGHTBOX_END -->
+
+<script>
+(function () {
+  const storageKey = 'guestbook-comments';
+  const apiPath = '/api/comments';
+  const form = document.getElementById('comment-form');
+  const input = document.getElementById('comment-input');
+  const list = document.getElementById('comment-list');
+  const empty = document.getElementById('comment-empty');
+
+  function sanitize(value) {
+    return value.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function formatTime(timestamp) {
+    return new Date(timestamp).toLocaleString('ko-KR', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+  }
+
+  function renderComments(comments) {
+    if (!comments || !comments.length) {
+      list.innerHTML = '';
+      empty.style.display = 'block';
+      return;
+    }
+
+    empty.style.display = 'none';
+    list.innerHTML = comments.map(comment => `
+      <article class="comment-card" data-id="${comment.id || comment.createdAt}">
+        <button class="delete-btn" aria-label="삭제">✕</button>
+        <time>${formatTime(comment.createdAt)}</time>
+        <p>${sanitize(comment.text)}</p>
+      </article>
+    `).join('');
+
+    list.querySelectorAll('.delete-btn').forEach(button => {
+      button.addEventListener('click', async function () {
+        const article = button.closest('.comment-card');
+        const id = article?.getAttribute('data-id');
+        article.remove();
+        if (id) {
+          try {
+            await fetch(`${apiPath}/${encodeURIComponent(id)}`, { method: 'DELETE' });
+          } catch (err) {
+            // ignore
+          }
+        }
+        const remaining = await loadComments();
+        renderComments(remaining);
+      });
+    });
+  }
+
+  async function getSavedComments() {
+    try {
+      const response = await fetch(apiPath);
+      if (response.ok) {
+        const data = await response.json();
+        if (Array.isArray(data)) return data.filter(c => !c.recipient);
+      }
+    } catch (error) {
+      // fallback to local storage when server is unavailable
+    }
+
+    const saved = localStorage.getItem(storageKey);
+    return saved ? JSON.parse(saved) : [];
+  }
+
+  async function saveComment(comment) {
+    if (!comment.id) comment.id = Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+    try {
+      const response = await fetch(apiPath, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(comment)
+      });
+      if (response.ok) return;
+    } catch (error) {
+      // fallback to local storage when server is unavailable
+    }
+
+    const current = JSON.parse(localStorage.getItem(storageKey) || '[]');
+    current.unshift(comment);
+    localStorage.setItem(storageKey, JSON.stringify(current));
+  }
+
+  async function loadComments() {
+    const comments = await getSavedComments();
+    renderComments(comments);
+    return comments;
+  }
+
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    const text = input.value.trim();
+    if (!text) return;
+
+    const comment = {
+      text,
+      createdAt: Date.now()
+    };
+
+    const comments = await loadComments();
+    comments.unshift(comment);
+    renderComments(comments);
+    input.value = '';
+    input.focus();
+    saveComment(comment);
+  });
+
+  loadComments();
+})();
+</script>
+<!-- lightbox-nav.js removed; navigation is now pure HTML/CSS -->
+</body>
+</html>
