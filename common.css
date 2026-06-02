@@ -433,6 +433,10 @@ img {
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
+  max-width: calc(100% - 140px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .modal-close {
   color: var(--ink-500);
@@ -971,9 +975,9 @@ img {
   display: block;
   max-width: 100%;
   max-height: min(68vh, 620px);
-  height: auto;
-  width: auto;
-  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .image-lightbox-close {
