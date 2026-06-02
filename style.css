@@ -54,7 +54,7 @@
 
 /* ── Balance modal window ── */
 #balance .balance-window {
-  max-width: 600px;
+  max-width: 720px;
   height: auto;
   max-height: 92vh;
   background: color-mix(in srgb, var(--user-tint) 55%, #f2f4f6);
@@ -80,8 +80,8 @@
 #balance .balance-layout {
   overflow: visible;
   position: relative;
-  padding: 24px 28px 36px;
-  min-height: 460px;
+  padding: 28px 32px 64px;
+  min-height: 580px;
 }
 
 #balance .carousel-row,
@@ -92,7 +92,7 @@
 /* ── Slide panels ── */
 #balance .panel-card {
   position: absolute;
-  inset: 24px 28px 64px;
+  inset: 28px 32px 64px;
   display: flex;
   flex-direction: column;
   opacity: 0;
@@ -109,11 +109,14 @@
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+  position: relative;
+  inset: auto;
 }
 
 /* ── Question header (outside inner card) ── */
 #balance .question-area {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+  flex-shrink: 0;
 }
 
 #balance .card-header {
@@ -236,114 +239,25 @@
 #balance #reason-toggle3:checked ~ .balance-layout .card3 .card-flip-inner,
 #balance #reason-toggle4:checked ~ .balance-layout .card4 .card-flip-inner,
 #balance #reason-toggle5:checked ~ .balance-layout .card5 .card-flip-inner {
-  min-height: 320px;
   transform: rotateY(180deg);
 }
 
-/* Card back height: eunchan */
-.user-page.eunchan #balance #reason-toggle1:checked ~ .balance-layout .card1 .card-flip-inner,
-.user-page.eunchan #balance #reason-toggle2:checked ~ .balance-layout .card2 .card-flip-inner,
-.user-page.eunchan #balance #reason-toggle3:checked ~ .balance-layout .card3 .card-flip-inner,
-.user-page.eunchan #balance #reason-toggle4:checked ~ .balance-layout .card4 .card-flip-inner,
-.user-page.eunchan #balance #reason-toggle5:checked ~ .balance-layout .card5 .card-flip-inner {
-  min-height: 260px;
+/* 동적 높이 조절: 현재 보이는 면이 박스 높이를 결정하게 함 */
+#balance #reason-toggle1:checked ~ .balance-layout .card1 .card-face-front,
+#balance #reason-toggle2:checked ~ .balance-layout .card2 .card-face-front,
+#balance #reason-toggle3:checked ~ .balance-layout .card3 .card-face-front,
+#balance #reason-toggle4:checked ~ .balance-layout .card4 .card-face-front,
+#balance #reason-toggle5:checked ~ .balance-layout .card5 .card-face-front {
+  position: absolute;
+  top: 0; left: 0; right: 0;
 }
 
-/* Card back height: gaeun — Q2 default; Q1, Q3, Q5 reduced by 1/6; Q4 +1/7 taller */
-.user-page.gaeun #balance #reason-toggle1:checked ~ .balance-layout .card1 .card-flip-inner,
-.user-page.gaeun #balance #reason-toggle3:checked ~ .balance-layout .card3 .card-flip-inner,
-.user-page.gaeun #balance #reason-toggle5:checked ~ .balance-layout .card5 .card-flip-inner {
-  min-height: 280px;
-}
-
-.user-page.gaeun #balance #reason-toggle4:checked ~ .balance-layout .card4 .card-flip-inner {
-  min-height: 320px;
-}
-
-/* Card back height: hayoung (shorter than eunchan) */
-.user-page.hayoung #balance #reason-toggle1:checked ~ .balance-layout .card1 .card-flip-inner,
-.user-page.hayoung #balance #reason-toggle2:checked ~ .balance-layout .card2 .card-flip-inner,
-.user-page.hayoung #balance #reason-toggle3:checked ~ .balance-layout .card3 .card-flip-inner,
-.user-page.hayoung #balance #reason-toggle4:checked ~ .balance-layout .card4 .card-flip-inner,
-.user-page.hayoung #balance #reason-toggle5:checked ~ .balance-layout .card5 .card-flip-inner {
-  min-height: 260px;
-}
-
-.user-page.eunchan #balance .card-face-back .answer-view {
-  flex: 1 1 auto;
-  justify-content: flex-start;
-  min-height: 0;
-  overflow: hidden;
-}
-
-.user-page.eunchan #balance .card-face-back .answer-view p {
-  flex-shrink: 0;
-  margin-bottom: 14px;
-}
-
-.user-page.eunchan #balance .card-face-back .balance-reason-img {
-  align-self: center;
-  flex-shrink: 1;
-  margin: 10px auto 0;
-  max-height: min(293px, 56%);
-  object-fit: contain;
-  width: min(100%, 587px);
-}
-
-/* Gaeun: Q1, Q3–Q5 back image +1/3 (Q2 uses default) */
-.user-page.gaeun #balance .card1 .card-face-back .balance-reason-img,
-.user-page.gaeun #balance .card3 .card-face-back .balance-reason-img,
-.user-page.gaeun #balance .card5 .card-face-back .balance-reason-img {
-  max-height: min(267px, 56%);
-  width: min(100%, 533px);
-}
-
-.user-page.gaeun #balance .card4 .card-face-back .answer-view {
-  flex: 1 1 auto;
-  justify-content: flex-start;
-  min-height: 0;
-  overflow: hidden;
-}
-
-.user-page.gaeun #balance .card4 .card-face-back .balance-reason-img {
-  align-self: center;
-  flex-shrink: 1;
-  margin: 4px auto 0;
-  max-height: min(267px, 56%);
-  width: min(100%, 533px);
-}
-
-.user-page.gaeun #balance .card4 .card-face-back .answer-view p {
-  flex-shrink: 0;
-  margin-bottom: 8px;
-}
-
-.user-page.hayoung #balance .card-face-back .balance-reason-img {
-  max-height: min(304px, 61%);
-  width: min(100%, 587px);
-}
-
-/* Card back: jimin */
-.user-page.jimin #balance #reason-toggle1:checked ~ .balance-layout .card1 .card-flip-inner,
-.user-page.jimin #balance #reason-toggle2:checked ~ .balance-layout .card2 .card-flip-inner,
-.user-page.jimin #balance #reason-toggle3:checked ~ .balance-layout .card3 .card-flip-inner,
-.user-page.jimin #balance #reason-toggle4:checked ~ .balance-layout .card4 .card-flip-inner,
-.user-page.jimin #balance #reason-toggle5:checked ~ .balance-layout .card5 .card-flip-inner {
-  min-height: 260px;
-}
-
-.user-page.jimin #balance .card-face-back {
-  padding-bottom: 12px;
-}
-
-.user-page.jimin #balance .card-face-back .balance-reason-img {
-  margin: 10px auto 0;
-  max-height: min(267px, 56%);
-  width: min(100%, 533px);
-}
-
-.user-page.jimin #balance .card-face-back .answer-view p {
-  margin-bottom: 14px;
+#balance #reason-toggle1:checked ~ .balance-layout .card1 .card-face-back,
+#balance #reason-toggle2:checked ~ .balance-layout .card2 .card-face-back,
+#balance #reason-toggle3:checked ~ .balance-layout .card3 .card-face-back,
+#balance #reason-toggle4:checked ~ .balance-layout .card4 .card-face-back,
+#balance #reason-toggle5:checked ~ .balance-layout .card5 .card-face-back {
+  position: relative;
 }
 
 #balance .card-face-back .card-footer {
@@ -385,7 +299,7 @@
   border-radius: 16px;
   color: #475569;
   display: flex;
-  flex: 1 1 240px;
+  flex: 1 1 0%;
   font-size: 14px;
   font-weight: 600;
   justify-content: center;
@@ -396,6 +310,28 @@
   text-align: center;
   white-space: normal;
   word-break: break-word;
+  transition: all 0.2s ease;
+}
+
+#balance .option-btn.selected {
+  background: #fff;
+  border-color: var(--user-color);
+  color: var(--user-accent);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+#balance .option-check {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--user-color);
+  color: var(--user-on-color, #fff);
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  margin-right: 8px;
+  flex-shrink: 0;
 }
 
 #balance .option-btn.selected .option-check {
@@ -484,7 +420,7 @@
   flex-shrink: 0;
   height: auto;
   margin: auto auto 0;
-  max-height: min(200px, 42%);
+  max-height: 220px;
   object-fit: contain;
   width: min(100%, 400px);
 }
@@ -584,94 +520,6 @@
     margin-bottom: 26px;
   }
 
-  #balance #reason-toggle1:checked ~ .balance-layout .card1 .card-flip-inner,
-  #balance #reason-toggle2:checked ~ .balance-layout .card2 .card-flip-inner,
-  #balance #reason-toggle3:checked ~ .balance-layout .card3 .card-flip-inner,
-  #balance #reason-toggle4:checked ~ .balance-layout .card4 .card-flip-inner,
-  #balance #reason-toggle5:checked ~ .balance-layout .card5 .card-flip-inner {
-    min-height: 384px;
-  }
-
-  .user-page.eunchan #balance #reason-toggle1:checked ~ .balance-layout .card1 .card-flip-inner,
-  .user-page.eunchan #balance #reason-toggle2:checked ~ .balance-layout .card2 .card-flip-inner,
-  .user-page.eunchan #balance #reason-toggle3:checked ~ .balance-layout .card3 .card-flip-inner,
-  .user-page.eunchan #balance #reason-toggle4:checked ~ .balance-layout .card4 .card-flip-inner,
-  .user-page.eunchan #balance #reason-toggle5:checked ~ .balance-layout .card5 .card-flip-inner {
-    min-height: 293px;
-  }
-
-  .user-page.gaeun #balance #reason-toggle1:checked ~ .balance-layout .card1 .card-flip-inner,
-  .user-page.gaeun #balance #reason-toggle3:checked ~ .balance-layout .card3 .card-flip-inner,
-  .user-page.gaeun #balance #reason-toggle5:checked ~ .balance-layout .card5 .card-flip-inner {
-    min-height: 320px;
-  }
-
-  .user-page.gaeun #balance #reason-toggle4:checked ~ .balance-layout .card4 .card-flip-inner {
-    min-height: 366px;
-  }
-
-  .user-page.hayoung #balance #reason-toggle1:checked ~ .balance-layout .card1 .card-flip-inner,
-  .user-page.hayoung #balance #reason-toggle2:checked ~ .balance-layout .card2 .card-flip-inner,
-  .user-page.hayoung #balance #reason-toggle3:checked ~ .balance-layout .card3 .card-flip-inner,
-  .user-page.hayoung #balance #reason-toggle4:checked ~ .balance-layout .card4 .card-flip-inner,
-  .user-page.hayoung #balance #reason-toggle5:checked ~ .balance-layout .card5 .card-flip-inner {
-    min-height: 293px;
-  }
-
-  .user-page.eunchan #balance .card-face-back .balance-reason-img {
-    margin: 4px auto 0;
-    max-height: min(253px, 53%);
-    width: min(100%, 480px);
-  }
-
-  .user-page.eunchan #balance .card-face-back .answer-view p {
-    margin-bottom: 6px;
-  }
-
-  .user-page.gaeun #balance .card1 .card-face-back .balance-reason-img,
-  .user-page.gaeun #balance .card3 .card-face-back .balance-reason-img,
-  .user-page.gaeun #balance .card5 .card-face-back .balance-reason-img {
-    max-height: min(267px, 59%);
-    width: min(100%, 427px);
-  }
-
-  .user-page.gaeun #balance .card4 .card-face-back .balance-reason-img {
-    margin: 2px auto 0;
-    max-height: min(267px, 59%);
-    width: min(100%, 427px);
-  }
-
-  .user-page.gaeun #balance .card4 .card-face-back .answer-view p {
-    margin-bottom: 4px;
-  }
-
-  .user-page.hayoung #balance .card-face-back .balance-reason-img {
-    max-height: min(277px, 59%);
-    width: min(100%, 480px);
-  }
-
-  .user-page.jimin #balance #reason-toggle1:checked ~ .balance-layout .card1 .card-flip-inner,
-  .user-page.jimin #balance #reason-toggle2:checked ~ .balance-layout .card2 .card-flip-inner,
-  .user-page.jimin #balance #reason-toggle3:checked ~ .balance-layout .card3 .card-flip-inner,
-  .user-page.jimin #balance #reason-toggle4:checked ~ .balance-layout .card4 .card-flip-inner,
-  .user-page.jimin #balance #reason-toggle5:checked ~ .balance-layout .card5 .card-flip-inner {
-    min-height: 294px;
-  }
-
-  .user-page.jimin #balance .card-face-back {
-    padding-bottom: 5px;
-  }
-
-  .user-page.jimin #balance .card-face-back .balance-reason-img {
-    margin: 4px auto 0;
-    max-height: min(267px, 56%);
-    width: min(100%, 480px);
-  }
-
-  .user-page.jimin #balance .card-face-back .answer-view p {
-    margin-bottom: 6px;
-  }
-
   #balance .card-face-back {
     padding: 10px 18px 8px;
   }
@@ -690,7 +538,7 @@
   }
 
   #balance .card-face-back .balance-reason-img {
-    max-height: min(200px, 44%);
+    max-height: 160px;
     width: min(100%, 320px);
   }
 
@@ -2608,19 +2456,32 @@
   #balance .card-face,
   #balance .card-face-front,
   #balance .card-face-back{
-    padding:10px 14px !important;
-    border-radius:18px !important;
+    padding:24px 20px !important;
+    border-radius:20px !important;
+  }
+  #balance .card-face-back{
+    padding-top:20px !important;
+  }
+  #balance .reason-header{
+    margin-top:0 !important;
+    margin-bottom:16px !important;
   }
   #balance .card-flip-inner{
     min-height:unset !important;
   }
   #balance .option-btn{
-    min-height:36px !important;
-    padding:6px 14px !important;
-    font-size:15px !important;
+    min-height:44px !important;
+    padding:12px 16px !important;
+    font-size:13px !important;
+    line-height:1.35 !important;
+    border: 2px solid transparent !important;
+  }
+  #balance .option-btn.selected{
+    border-color: var(--user-color) !important;
   }
   #balance .options-box{
-    gap:8px !important;
+    gap:10px !important;
+    margin-bottom:16px !important;
   }
 
   .user-page.jimin .screentime-bar,
