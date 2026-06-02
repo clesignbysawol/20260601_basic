@@ -4,6 +4,7 @@
   HTML/CSS만 사용하는 구조라 . . ! 모달 닫기는 앵커(:target)로 처리합니다.
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');
 
 :root {
   --ink-900: #0f172a;
@@ -37,10 +38,12 @@
 html, body {
   margin: 0;
   min-height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", Arial, sans-serif;
+  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", Arial, sans-serif;
 }
 body {
   color: var(--ink-900);
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 a {
   color: inherit;
@@ -864,15 +867,36 @@ img {
    ================================================== */
 
 @media (max-width: 767px) {
+.toolbar-nav {
+  display: none;
+}
+.toolbar-left {
+  gap: 8px;
+}
+.page-title {
+  max-width: calc(100% - 170px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .folder-grid {
   gap: 32px 26px;
-  grid-template-columns: repeat(2, 152px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 330px;
 }
-.folder, .folder-art {
-  width: 152px;
+.folder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 .folder-art {
-  height: 125px;
+  width: min(152px, 38vw);
+  height: auto;
+  aspect-ratio: 176 / 144;
 }
 .sidebar {
   display: none;
