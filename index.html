@@ -14,13 +14,13 @@
     <div class="toolbar-left">
       <span class="traffic" aria-hidden="true"><i></i><i></i><i></i></span>
       <nav class="toolbar-nav" aria-label="페이지 이동">
-        <span class="tool-button off"><img src="https://img.icons8.com/ios_filled/1200/back.jpg" alt="뒤로가기" style="width: 18px; height: auto;"></span>
-        <span class="tool-button off"><img src="https://i.ifh.cc/QsaR64.jpg" alt="앞으로가기" style="width: 18px; height: auto;"></span>
+        <span class="tool-button off"><img src="https://img.icons8.com/ios_filled/1200/back.jpg" alt="뒤로가기"></span>
+        <span class="tool-button off"><img src="https://i.ifh.cc/QsaR64.jpg" alt="앞으로가기"></span>
       </nav>
       <a class="tool-button" href="index.html" aria-label="홈">
-        <img src="https://i.ifh.cc/F5Lc6m.png" alt="홈" style="width: 18px; height: auto;"></a>
+        <img src="https://i.ifh.cc/F5Lc6m.png" alt="홈"></a>
     </div>
-    <a class="guest-link" href="#comments"><img src="https://cdn-icons-png.flaticon.com/512/8560/8560560.png" alt="방명록" style="width: 18px; height: auto;">방명록</a>
+    <a class="guest-link" href="#comments"><img src="https://cdn-icons-png.flaticon.com/512/8560/8560560.png" alt="방명록">방명록</a>
   </header>
 
   <main class="home-stage">
@@ -48,15 +48,15 @@
     <div class="dock-inner">
       <a class="dock-app" href="#gallery">
         <span class="label">갤러리</span>
-        <img src="https://img.icons8.com/color/1200/ios-photos.jpg" alt="갤러리" style="width: 44px; height: auto;">
+        <img src="https://img.icons8.com/color/1200/ios-photos.jpg" alt="갤러리">
       </a>
       <a class="dock-app" href="#calendar">
         <span class="label">캘린더</span>
-        <img src="https://help.apple.com/assets/67DB4AD617009A1F970697F4/67DB4AD747D53316F70BB655/ko_KR/96c1184c78fec86bf4a5be8158f5ddf8.png" alt="캘린더" style="width: 44px; height: auto;">
+        <img src="https://help.apple.com/assets/67DB4AD617009A1F970697F4/67DB4AD747D53316F70BB655/ko_KR/96c1184c78fec86bf4a5be8158f5ddf8.png" alt="캘린더">
       </a>
       <a class="dock-app" href="#memo">
         <span class="label">메모</span>
-        <img src="https://help.apple.com/assets/68CC860E47105BA9B400F778/68CC861147105BA9B400F77E/ko_KR/addbfeb30b8f7cead2b677a40b9a630e.png" alt="메모" style="width: 44px; height: auto;">
+        <img src="https://help.apple.com/assets/68CC860E47105BA9B400F778/68CC861147105BA9B400F77E/ko_KR/addbfeb30b8f7cead2b677a40b9a630e.png" alt="메모">
       </a>
     </div>
   </footer>
@@ -535,14 +535,14 @@
           </nav>
         </aside>
         
-        <div class="panel" style="flex: 1 !important; height: 100% !important; max-height: 100% !important; overflow-y: auto !important; box-sizing: border-box; padding-bottom: 60px;">
+        <div class="panel">
           
-          <header class="section-header" style="display: flex; align-items: center; justify-content: space-between;">
+          <header class="section-header calendar-header">
             <div>
               <p class="eyebrow">May 2026</p>
-              <h2 style="display: inline-block; margin: 0; vertical-align: middle;">2026년 5월</h2>
+              <h2>2026년 5월</h2>
               <div class="cal-nav">
-                <a href="#" class="cal-btn" style="opacity: 0.3; pointer-events: none;">&lt;</a>
+                <a href="#" class="cal-btn disabled">&lt;</a>
                 <!-- 6월 모달(#calendar-june) 구역으로 화면 점프 연동 -->
                 <a href="#calendar-june" class="cal-btn">&gt;</a>
               </div>
@@ -556,7 +556,7 @@
             <div class="grid-header">목</div>
             <div class="grid-header">금</div>
             <div class="grid-header">토</div>
-            <div class="grid-header" style="color:#ef4444;">일</div>
+            <div class="grid-header sunday">일</div>
             
             <div class="grid-day blank"></div>
             <div class="grid-day blank"></div>
@@ -658,16 +658,16 @@
           </nav>
         </aside>
         
-        <div class="panel" style="flex: 1 !important; height: 100% !important; max-height: 100% !important; overflow-y: auto !important; box-sizing: border-box; padding-bottom: 60px;">
+        <div class="panel">
           
-          <header class="section-header" style="display: flex; align-items: center; justify-content: space-between;">
+          <header class="section-header calendar-header">
             <div>
               <p class="eyebrow">June 2026</p>
-              <h2 style="display: inline-block; margin: 0; vertical-align: middle;">2026년 6월</h2>
+              <h2>2026년 6월</h2>
               <div class="cal-nav">
                 <!-- 이전달 화살표 클릭 시 원래 5월 모달(#calendar-monthly) 구역으로 롤백 -->
                 <a href="#calendar-monthly" class="cal-btn">&lt;</a>
-                <a href="#" class="cal-btn" style="opacity: 0.3; pointer-events: none;">&gt;</a>
+                <a href="#" class="cal-btn disabled">&gt;</a>
               </div>
             </div>
           </header>
@@ -679,7 +679,7 @@
             <div class="grid-header">목</div>
             <div class="grid-header">금</div>
             <div class="grid-header">토</div>
-            <div class="grid-header" style="color: #ef4444;">일</div>
+            <div class="grid-header sunday">일</div>
             
             <div class="grid-day"><span class="day-label">1</span><div class="calendar-event-bar blue">📦 파트별 소스코드 취합</div></div>
             <div class="grid-day"><span class="day-label">2</span><div class="calendar-event-bar blue">📦 소스코드 통합 및 내부 검토</div></div>
@@ -702,7 +702,7 @@
             <div class="grid-day"><span class="day-label">15</span></div>
             <div class="grid-day"><span class="day-label">16</span></div>
             <div class="grid-day"><span class="day-label">17</span></div>
-            <div class="grid-day" style="background-color: #fff7ed;"><span class="day-label" style="color: #ea580c;">18</span><span class="mini-badge red" style="background-color: #ea580c; color: white; text-align: center; font-weight: bold;">🏆 최종 성과 공유</span></div>
+            <div class="grid-day highlight-orange"><span class="day-label highlight-orange">18</span><span class="mini-badge orange-solid">🏆 최종 성과 공유</span></div>
             <div class="grid-day"><span class="day-label">19</span></div>
             <div class="grid-day"><span class="day-label">20</span></div>
             <div class="grid-day"><span class="day-label">21</span></div>
@@ -795,7 +795,7 @@
         <p class="modal-title">전체 댓글</p>
         <a class="modal-close" href="#">×</a>
       </div>
-      <div class="modal-body" style="display:flex;flex-direction:column">
+      <div class="modal-body col-layout">
         <div class="panel"><header class="section-header"><p class="eyebrow">Guestbook</p><h2>모두에게 남긴 한마디</h2></header><div class="empty-state" id="comment-empty">아직 댓글이 없습니다. 처음으로 한마디 남겨보세요.</div><div class="comment-list" id="comment-list" aria-live="polite"></div></div>
         <form id="comment-form" class="inputbar"><input id="comment-input" type="text" placeholder="댓글을 입력하세요" aria-label="댓글 내용"><button type="submit" class="send-button">↑</button></form>
       </div>

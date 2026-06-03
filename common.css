@@ -142,8 +142,11 @@ img {
   gap: 4px;
 }
 .tool-button, .modal-close {
-  align-items: center; border-radius: 8px; color: var(--ink-600); display: inline-flex;
+  align-items: center; border-radius: 8px; display: inline-flex;
   height: 28px; justify-content: center; transition: background .18s; width: 28px;
+}
+.tool-button {
+  color: var(--ink-600);
 }
 .tool-button:hover, .modal-close:hover {
   background: var(--ink-100);
@@ -151,6 +154,10 @@ img {
 .tool-button.off {
   opacity: .3;
   pointer-events: none;
+}
+.tool-button img, .guest-link img, .message-footer img {
+  width: 18px;
+  height: auto;
 }
 .chevron, .home-mark, .close-mark, .message-mark {
   display: block; height: 17px; position: relative; width: 17px;
@@ -355,6 +362,10 @@ img {
   opacity: 1;
   transform: translate(-50%,0);
 }
+.dock-app img {
+  width: 44px;
+  height: auto;
+}
 .photos-icon {
   height: 38px;
   position: relative;
@@ -471,6 +482,9 @@ img {
   min-height: 0;
   overflow: hidden;
 }
+.modal-body.col-layout {
+  flex-direction: column;
+}
 .sidebar {
   background: rgba(248,250,252,.75);
   border-right: 1px solid var(--ink-200);
@@ -576,117 +590,6 @@ img {
   margin-top: 3px;
 }
 
-.timeline li {
-  align-items: baseline;
-  border-bottom: 1px solid var(--ink-200);
-  display: flex;
-  gap: 20px;
-  padding: 16px 0;
-}
-.timeline li:first-child {
-  border-top: 1px solid var(--ink-200);
-}
-.date-block {
-  flex-shrink: 0;
-  width: 56px;
-}
-.date-block b {
-  display: block;
-  font-size: 20px;
-  letter-spacing: -.02em;
-  line-height: 1;
-}
-.date-block small {
-  color: var(--ink-400);
-  display: block;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: .12em;
-  margin-top: 5px;
-}
-.timeline h4 {
-  font-size: 14.5px;
-}
-.timeline p {
-  color: var(--ink-500);
-  font-size: 13px;
-  margin-top: 5px;
-}
-.calendar {
-  border: 1px solid var(--ink-200);
-  border-radius: 16px;
-  display: grid;
-  grid-template-columns: repeat(7,1fr);
-  overflow: hidden;
-}
-.weekday {
-  border-bottom: 1px solid var(--ink-200);
-  color: var(--ink-500);
-  font-size: 11px;
-  font-weight: 600;
-  padding: 11px;
-  text-align: center;
-}
-.day {
-  border-right: 1px solid var(--ink-200);
-  border-top: 1px solid var(--ink-200);
-  color: var(--ink-700);
-  font-size: 12px;
-  font-weight: 600;
-  min-height: 78px;
-  padding: 7px 8px;
-}
-.day.blank {
-  background: var(--ink-50);
-}
-.event {
-  background: var(--brand-500);
-  border-radius: 4px;
-  color: #fff;
-  display: block;
-  font-size: 10px;
-  margin-top: 6px;
-  padding: 2px 6px;
-}
-.event.red {
-  background: #ff4f4f;
-}
-.event.dark {
-  background: var(--ink-900);
-}
-.priority-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.priority {
-  background: #fff;
-  border: 1px solid var(--ink-200);
-  border-left: 4px solid #ff4f4f;
-  border-radius: 14px;
-  padding: 16px 20px;
-}
-.priority.mid {
-  border-left-color: var(--brand-500);
-}
-.priority b {
-  font-size: 14.5px;
-}
-.priority small {
-  color: #ff4f4f;
-  font-size: 10px;
-  font-weight: 700;
-  margin-left: 8px;
-}
-.priority.mid small {
-  color: var(--brand-500);
-}
-.priority p {
-  color: var(--ink-500);
-  font-size: 13px;
-  margin-top: 7px;
-}
-
                 /*----------------------------------------- 메세지 창 ------------------------------------------------*/
 
 .memo-grid {
@@ -749,7 +652,7 @@ img {
 }
 .send-button {
   align-items: center;
-  background: var(--brand-500);
+  background: var(--user-color, var(--brand-500));
   border-radius: 50%;
   color: #fff;
   display: flex;
@@ -918,11 +821,19 @@ img {
   height: auto;
   aspect-ratio: 176 / 144;
 }
+.folder-name {
+  font-size: 14px;
+  line-height: 1.35;
+  margin-top: 9px;
+  white-space: normal;
+  word-break: keep-all;
+}
 .sidebar {
   display: none;
 }
 .panel {
-  padding: 26px 20px 42px;
+  overflow-x: auto;
+  padding: 22px 14px 36px;
 }
 .photo-grid {
   gap: 12px;
