@@ -2377,8 +2377,9 @@
 }
 
 /* jimin screentime black text */
-.jimin .screentime-bar{
-  color:#000 !important;
+.jimin .screentime-bar,
+.jimin .screentime-desc {
+  color:#a48207 !important;
 }
 
 /* ===== MOBILE HEADER + BALANCE FIX v2 ===== */
