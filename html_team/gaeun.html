@@ -10,22 +10,32 @@
 <body class="user-page gaeun">
   <header class="topbar">
     <div class="toolbar-left">
-      <span class="traffic"><i></i><i></i><i></i></span>
-      <nav class="toolbar-nav"><a class="tool-button" href="../index.html"><i class="chevron"></i></a><span class="tool-button off"><i class="chevron right"></i></span></nav>
-      <a class="tool-button" href="../index.html" aria-label="홈"><i class="home-mark"></i></a>
+      <span class="traffic" aria-hidden="true"><i></i><i></i><i></i></span>
+      <nav class="toolbar-nav" aria-label="페이지 이동">
+        <span class="tool-button off"><img src="https://img.icons8.com/ios_filled/1200/back.jpg" alt="뒤로가기" style="width: 18px; height: auto;"></span>
+        <span class="tool-button off"><img src="https://i.ifh.cc/QsaR64.jpg" alt="앞으로가기" style="width: 18px; height: auto;"></span>
+      </nav>
+      <a class="tool-button" href="../index.html" aria-label="홈">
+        <img src="https://i.ifh.cc/F5Lc6m.png" alt="홈" style="width: 18px; height: auto;"></a>
     </div>
     <h1 class="page-title">가은의 폴더</h1><span class="tool-button off"></span>
   </header>
   <main class="personal-stage">
     <section class="personal-folders">
-      <a class="folder" href="#photos"><svg class="folder-art" viewBox="0 0 176 144"><path fill="#ff4f4f" d="M8 20V136c0 4 2 8 6 8h148c4 0 6-4 6-8V28c0-4-2-8-6-8H72L64 8c-2-4-6-8-10-8H14c-4 0-6 4-6 8v12Z"/><path fill="#fff" opacity=".1" d="M12 24v116c0 1 .5 2 1 2h150c.5 0 1-1 1-2V24H12Z"/></svg><span class="folder-name">어릴 때부터 현재까지</span></a>
-      <a class="folder" href="#balance"><svg class="folder-art" viewBox="0 0 176 144"><path fill="#ff4f4f" d="M8 20V136c0 4 2 8 6 8h148c4 0 6-4 6-8V28c0-4-2-8-6-8H72L64 8c-2-4-6-8-10-8H14c-4 0-6 4-6 8v12Z"/><path fill="#fff" opacity=".1" d="M12 24v116c0 1 .5 2 1 2h150c.5 0 1-1 1-2V24H12Z"/></svg><span class="folder-name">밸런스게임</span></a>
-      <a class="folder" href="#profile"><svg class="folder-art" viewBox="0 0 176 144"><path fill="#ff4f4f" d="M8 20V136c0 4 2 8 6 8h148c4 0 6-4 6-8V28c0-4-2-8-6-8H72L64 8c-2-4-6-8-10-8H14c-4 0-6 4-6 8v12Z"/><path fill="#fff" opacity=".1" d="M12 24v116c0 1 .5 2 1 2h150c.5 0 1-1 1-2V24H12Z"/></svg><span class="folder-name">기본 프로필</span></a>
-      <a class="folder" href="#playlist"><svg class="folder-art" viewBox="0 0 176 144"><path fill="#ff4f4f" d="M8 20V136c0 4 2 8 6 8h148c4 0 6-4 6-8V28c0-4-2-8-6-8H72L64 8c-2-4-6-8-10-8H14c-4 0-6 4-6 8v12Z"/><path fill="#fff" opacity=".1" d="M12 24v116c0 1 .5 2 1 2h150c.5 0 1-1 1-2V24H12Z"/></svg><span class="folder-name">플레이리스트</span></a>
+      <a class="folder" href="#photos"><img class="folder-art" src="https://i.ifh.cc/S6F5Dz.png" alt="사진 폴더"><span class="folder-name">어릴 때부터 현재까지</span></a>
+      <a class="folder" href="#balance"><img class="folder-art" src="https://i.ifh.cc/S6F5Dz.png" alt="밸런스 폴더"><span class="folder-name">밸런스게임</span></a>
+      <a class="folder" href="#profile"><img class="folder-art" src="https://i.ifh.cc/S6F5Dz.png" alt="프로필 폴더"><span class="folder-name">기본 프로필</span></a>
+      <a class="folder" href="#playlist"><img class="folder-art" src="https://i.ifh.cc/S6F5Dz.png" alt="플레이리스트 폴더"><span class="folder-name">플레이리스트</span></a>
     </section>
 
   </main>
-  <footer class="message-footer"><a href="#message"><i class="message-mark"></i><span>가은에게 한마디 남기기</span><small>0개</small></a></footer>
+  <footer class="message-footer">
+    <a href="#message">
+      <img src="https://cdn-icons-png.flaticon.com/512/8560/8560560.png" alt="방명록" style="width: 18px; height: auto;">
+      <span>가은에게 한마디 남기기</span>
+      <small>0개</small>
+    </a>
+  </footer>
   
   <section class="modal" id="profile">
     <a class="modal-backdrop-close" href="#" aria-label="창 닫기"></a>
@@ -740,7 +750,7 @@
         </aside>
         <div class="playlist-main">
           <header class="playlist-header">
-            <div class="cover">G</div>
+            <div class="cover"><img src="https://image.bugsm.co.kr/album/images/500/40467/4046760.jpg" alt="앨범 커버"></div>
             <div class="playlist-copy">
               <p class="eyebrow">비공개 플레이리스트</p>
               <h1>안부를 묻진 않아도</h1>
@@ -759,7 +769,6 @@
               <button type="button" class="music-tool music-tool-lg" aria-label="플레이리스트에 추가">＋</button>
               <button type="button" class="music-tool music-tool-lg" aria-label="더보기">···</button>
             </div>
-            <button type="button" class="music-search" aria-label="검색">검색</button>
           </div>
           <div class="tracks playlist-tracks">
             <div class="track head">
@@ -771,7 +780,7 @@
             </div>
                         <div class="track">
               <span class="track-num">01</span>
-              <span class="mini-cover">안</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/40467/4046760.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>안부를 묻진 않아도</strong>
                 <span class="track-artist-sub">이상순</span>
@@ -781,7 +790,7 @@
             </div>
             <div class="track">
               <span class="track-num">02</span>
-              <span class="mini-cover">청</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/80047/8004729.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>청혼</strong>
                 <span class="track-artist-sub">이소라</span>
@@ -791,7 +800,7 @@
             </div>
             <div class="track">
               <span class="track-num">03</span>
-              <span class="mini-cover">r</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/41049/4104901.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>romeo n juliet (feat. 유라(youra))</strong>
                 <span class="track-artist-sub">죠지, 유라</span>
@@ -801,7 +810,7 @@
             </div>
             <div class="track">
               <span class="track-num">04</span>
-              <span class="mini-cover">일</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/41175/4117549.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>일인칭 관찰자 시점</strong>
                 <span class="track-artist-sub">Shin In Ryu</span>
@@ -811,7 +820,7 @@
             </div>
             <div class="track">
               <span class="track-num">05</span>
-              <span class="mini-cover">샴</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/39/3944.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>샴푸의 요정</strong>
                 <span class="track-artist-sub">빛과 소금</span>
@@ -821,7 +830,7 @@
             </div>
             <div class="track">
               <span class="track-num">06</span>
-              <span class="mini-cover">그</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/8/844.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>그대와 춤을</strong>
                 <span class="track-artist-sub">이소라</span>
@@ -831,7 +840,7 @@
             </div>
             <div class="track">
               <span class="track-num">07</span>
-              <span class="mini-cover">고</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/4258/425835.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>고스란히</strong>
                 <span class="track-artist-sub">빌리어코스티, 조원선</span>
@@ -885,7 +894,6 @@
               <button type="button" class="music-tool music-tool-lg" aria-label="플레이리스트에 추가">＋</button>
               <button type="button" class="music-tool music-tool-lg" aria-label="더보기">···</button>
             </div>
-            <button type="button" class="music-search" aria-label="검색">검색</button>
           </div>
           <div class="tracks playlist-tracks">
             <div class="track head">
@@ -897,7 +905,7 @@
             </div>
                         <div class="track">
               <span class="track-num">01</span>
-              <span class="mini-cover">안</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/40467/4046760.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>안부를 묻진 않아도</strong>
                 <span class="track-artist-sub">이상순</span>
@@ -907,7 +915,7 @@
             </div>
             <div class="track">
               <span class="track-num">02</span>
-              <span class="mini-cover">청</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/80047/8004729.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>청혼</strong>
                 <span class="track-artist-sub">이소라</span>
@@ -917,7 +925,7 @@
             </div>
             <div class="track">
               <span class="track-num">03</span>
-              <span class="mini-cover">r</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/41049/4104901.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>romeo n juliet (feat. 유라(youra))</strong>
                 <span class="track-artist-sub">죠지, 유라</span>

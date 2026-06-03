@@ -16,21 +16,31 @@
   <!-- FEATURE: COMMON_SHELL START / 담당: 가은 / 개인 화면 공통 연결 -->
   <header class="topbar">
     <div class="toolbar-left">
-      <span class="traffic"><i></i><i></i><i></i></span>
-      <nav class="toolbar-nav"><a class="tool-button" href="../index.html"><i class="chevron"></i></a><span class="tool-button off"><i class="chevron right"></i></span></nav>
-      <a class="tool-button" href="../index.html" aria-label="홈"><i class="home-mark"></i></a>
+      <span class="traffic" aria-hidden="true"><i></i><i></i><i></i></span>
+      <nav class="toolbar-nav" aria-label="페이지 이동">
+        <span class="tool-button off"><img src="https://img.icons8.com/ios_filled/1200/back.jpg" alt="뒤로가기" style="width: 18px; height: auto;"></span>
+        <span class="tool-button off"><img src="https://i.ifh.cc/QsaR64.jpg" alt="앞으로가기" style="width: 18px; height: auto;"></span>
+      </nav>
+      <a class="tool-button" href="../index.html" aria-label="홈">
+        <img src="https://i.ifh.cc/F5Lc6m.png" alt="홈" style="width: 18px; height: auto;"></a>
     </div>
     <h1 class="page-title">하영의 폴더</h1><span class="tool-button off"></span>
   </header>
   <main class="personal-stage">
     <section class="personal-folders">
-      <a class="folder" href="#photos"><svg class="folder-art" viewBox="0 0 176 144"><path fill="#0cdfff" d="M8 20V136c0 4 2 8 6 8h148c4 0 6-4 6-8V28c0-4-2-8-6-8H72L64 8c-2-4-6-8-10-8H14c-4 0-6 4-6 8v12Z"/><path fill="#fff" opacity=".1" d="M12 24v116c0 1 .5 2 1 2h150c.5 0 1-1 1-2V24H12Z"/></svg><span class="folder-name">어릴 때부터 현재까지</span></a>
-      <a class="folder" href="#balance"><svg class="folder-art" viewBox="0 0 176 144"><path fill="#0cdfff" d="M8 20V136c0 4 2 8 6 8h148c4 0 6-4 6-8V28c0-4-2-8-6-8H72L64 8c-2-4-6-8-10-8H14c-4 0-6 4-6 8v12Z"/><path fill="#fff" opacity=".1" d="M12 24v116c0 1 .5 2 1 2h150c.5 0 1-1 1-2V24H12Z"/></svg><span class="folder-name">밸런스게임</span></a>
-      <a class="folder" href="#profile"><svg class="folder-art" viewBox="0 0 176 144"><path fill="#0cdfff" d="M8 20V136c0 4 2 8 6 8h148c4 0 6-4 6-8V28c0-4-2-8-6-8H72L64 8c-2-4-6-8-10-8H14c-4 0-6 4-6 8v12Z"/><path fill="#fff" opacity=".1" d="M12 24v116c0 1 .5 2 1 2h150c.5 0 1-1 1-2V24H12Z"/></svg><span class="folder-name">기본 프로필</span></a>
-      <a class="folder" href="#playlist"><svg class="folder-art" viewBox="0 0 176 144"><path fill="#0cdfff" d="M8 20V136c0 4 2 8 6 8h148c4 0 6-4 6-8V28c0-4-2-8-6-8H72L64 8c-2-4-6-8-10-8H14c-4 0-6 4-6 8v12Z"/><path fill="#fff" opacity=".1" d="M12 24v116c0 1 .5 2 1 2h150c.5 0 1-1 1-2V24H12Z"/></svg><span class="folder-name">플레이리스트</span></a>
+      <a class="folder" href="#photos"><img class="folder-art" src="https://i.ifh.cc/Rt15RD.png" alt="사진 폴더"><span class="folder-name">어릴 때부터 현재까지</span></a>
+      <a class="folder" href="#balance"><img class="folder-art" src="https://i.ifh.cc/Rt15RD.png" alt="밸런스 폴더"><span class="folder-name">밸런스게임</span></a>
+      <a class="folder" href="#profile"><img class="folder-art" src="https://i.ifh.cc/Rt15RD.png" alt="프로필 폴더"><span class="folder-name">기본 프로필</span></a>
+      <a class="folder" href="#playlist"><img class="folder-art" src="https://i.ifh.cc/Rt15RD.png" alt="플레이리스트 폴더"><span class="folder-name">플레이리스트</span></a>
     </section>
   </main>
-  <footer class="message-footer"><a href="#message"><i class="message-mark"></i><span>하영에게 한마디 남기기</span><small>0개</small></a></footer>
+  <footer class="message-footer">
+    <a href="#message">
+      <img src="https://cdn-icons-png.flaticon.com/512/8560/8560560.png" alt="방명록" style="width: 18px; height: auto;">
+      <span>하영에게 한마디 남기기</span>
+      <small>0개</small>
+    </a>
+  </footer>
   <!-- FEATURE: COMMON_SHELL END / 담당: 가은 / 개인 화면 공통 연결 -->
 
 
@@ -789,11 +799,11 @@
         </aside>
         <div class="playlist-main">
           <header class="playlist-header">
-            <div class="cover">H</div>
+            <div class="cover"><img src="https://image.bugsm.co.kr/album/images/500/149857/14985741.jpg" alt="앨범 커버"></div>
             <div class="playlist-copy">
               <p class="eyebrow">비공개 플레이리스트</p>
               <h1>탈출</h1>
-              <p>하영이 직접 고른 트랙들. 일상과 가장 잘 어울리는 사운드를 모았어요.</p>
+              <p>하영이 직접 고른 트랙들!</p>
               <small><b>하영</b> · 7곡</small>
             </div>
           </header>
@@ -808,7 +818,6 @@
               <button type="button" class="music-tool music-tool-lg" aria-label="플레이리스트에 추가">＋</button>
               <button type="button" class="music-tool music-tool-lg" aria-label="더보기">···</button>
             </div>
-            <button type="button" class="music-search" aria-label="검색">검색</button>
           </div>
           <div class="tracks playlist-tracks">
             <div class="track head">
@@ -820,7 +829,7 @@
             </div>
             <div class="track">
               <span class="track-num">01</span>
-              <span class="mini-cover">J</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/149857/14985741.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>JUST FUN!</strong>
                 <span class="track-artist-sub">Balming Tiger, Omega Sapien, wnjn, sogumm</span>
@@ -830,7 +839,7 @@
             </div>
             <div class="track">
               <span class="track-num">02</span>
-              <span class="mini-cover">G</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/203903/20390302.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>그물,덫,발사대기,포획 (feat. 양홍원)</strong>
                 <span class="track-artist-sub">unofficialboyy, HAIF</span>
@@ -840,7 +849,7 @@
             </div>
             <div class="track">
               <span class="track-num">03</span>
-              <span class="mini-cover">R</span>
+              <span class="mini-cover"><img src="https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/083/989/737/83989737_1688346262196_1_600x600.JPG" alt=""></span>
               <div class="track-title-cell">
                 <strong>Ride (feat. Leellamarz &amp; DON MALIK)</strong>
                 <span class="track-artist-sub">Jayci yucca &amp; DNSS</span>
@@ -850,7 +859,7 @@
             </div>
             <div class="track">
               <span class="track-num">04</span>
-              <span class="mini-cover">G</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/202848/20284851.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>Grow Back (feat. 브라운티거)</strong>
                 <span class="track-artist-sub">조광일</span>
@@ -860,7 +869,7 @@
             </div>
             <div class="track">
               <span class="track-num">05</span>
-              <span class="mini-cover">P</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/204549/20454959.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>PEP (feat. 정상수)</strong>
                 <span class="track-artist-sub">보이비 &amp; 개코</span>
@@ -870,7 +879,7 @@
             </div>
             <div class="track">
               <span class="track-num">06</span>
-              <span class="mini-cover">같</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/203103/20310375.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>같은 옷</strong>
                 <span class="track-artist-sub">던말릭</span>
@@ -880,7 +889,7 @@
             </div>
             <div class="track">
               <span class="track-num">07</span>
-              <span class="mini-cover">B</span>
+              <span class="mini-cover"><img src="https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/083/989/737/83989737_1688346262196_1_600x600.JPG" alt=""></span>
               <div class="track-title-cell">
                 <strong>Balaclava (feat. lobonabeat!)</strong>
                 <span class="track-artist-sub">Jayci yucca &amp; DNSS</span>
@@ -915,11 +924,11 @@
         </aside>
         <div class="playlist-main">
           <header class="playlist-header">
-            <div class="cover cover-likes">♡</div>
+            <div class="cover cover-likes"><img src="https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/083/989/737/83989737_1688346262196_1_600x600.JPG" alt="앨범 커버"></div>
             <div class="playlist-copy">
               <p class="eyebrow">비공개 플레이리스트</p>
               <h1>좋아요</h1>
-              <p>하영이 하트 눌러 저장한 트랙들. 마음에 드는 곡만 모아뒀어요.</p>
+              <p>하영이 하트 눌러 저장한 트랙들. 하영은 힙합을 좋아하고 귀엽고 사랑스럽고 멋지고 대단하고 . . (더보기)</p>
               <small><b>하영</b> · 5곡 · 약 20분 54초</small>
             </div>
           </header>
@@ -934,7 +943,6 @@
               <button type="button" class="music-tool music-tool-lg" aria-label="플레이리스트에 추가">＋</button>
               <button type="button" class="music-tool music-tool-lg" aria-label="더보기">···</button>
             </div>
-            <button type="button" class="music-search" aria-label="검색">검색</button>
           </div>
           <div class="tracks playlist-tracks">
             <div class="track head">
@@ -946,7 +954,7 @@
             </div>
             <div class="track">
               <span class="track-num">01</span>
-              <span class="mini-cover">S</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/149857/14985741.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>Stronger</strong>
                 <span class="track-artist-sub">Kanye West</span>
@@ -956,7 +964,7 @@
             </div>
             <div class="track">
               <span class="track-num">02</span>
-              <span class="mini-cover">J</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/149857/14985741.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>JUST FUN!</strong>
                 <span class="track-artist-sub">Balming Tiger, Omega Sapien, wnjn, sogumm</span>
@@ -966,7 +974,7 @@
             </div>
             <div class="track">
               <span class="track-num">03</span>
-              <span class="mini-cover">R</span>
+              <span class="mini-cover"><img src="https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/083/989/737/83989737_1688346262196_1_600x600.JPG" alt=""></span>
               <div class="track-title-cell">
                 <strong>Ride (feat. Leellamarz &amp; DON MALIK)</strong>
                 <span class="track-artist-sub">Jayci yucca &amp; DNSS</span>
@@ -976,7 +984,7 @@
             </div>
             <div class="track">
               <span class="track-num">04</span>
-              <span class="mini-cover">G</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/202848/20284851.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>Grow Back (feat. 브라운티거)</strong>
                 <span class="track-artist-sub">조광일</span>
@@ -986,7 +994,7 @@
             </div>
             <div class="track">
               <span class="track-num">05</span>
-              <span class="mini-cover">P</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/204549/20454959.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>PEP (feat. 정상수)</strong>
                 <span class="track-artist-sub">보이비 &amp; 개코</span>

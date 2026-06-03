@@ -12,21 +12,31 @@
   <!-- FEATURE: COMMON_SHELL START / 담당: 가은 / 개인 화면 공통 연결 -->
   <header class="topbar">
     <div class="toolbar-left">
-      <span class="traffic"><i></i><i></i><i></i></span>
-      <nav class="toolbar-nav"><a class="tool-button" href="../index.html"><i class="chevron"></i></a><span class="tool-button off"><i class="chevron right"></i></span></nav>
-      <a class="tool-button" href="../index.html" aria-label="홈"><i class="home-mark"></i></a>
+      <span class="traffic" aria-hidden="true"><i></i><i></i><i></i></span>
+      <nav class="toolbar-nav" aria-label="페이지 이동">
+        <span class="tool-button off"><img src="https://img.icons8.com/ios_filled/1200/back.jpg" alt="뒤로가기" style="width: 18px; height: auto;"></span>
+        <span class="tool-button off"><img src="https://i.ifh.cc/QsaR64.jpg" alt="앞으로가기" style="width: 18px; height: auto;"></span>
+      </nav>
+      <a class="tool-button" href="../index.html" aria-label="홈">
+        <img src="https://i.ifh.cc/F5Lc6m.png" alt="홈" style="width: 18px; height: auto;"></a>
     </div>
     <h1 class="page-title">은찬의 폴더</h1><span class="tool-button off"></span>
   </header>
   <main class="personal-stage">
     <section class="personal-folders">
-      <a class="folder" href="#photos"><svg class="folder-art" viewBox="0 0 176 144"><path fill="#00b7ff" d="M8 20V136c0 4 2 8 6 8h148c4 0 6-4 6-8V28c0-4-2-8-6-8H72L64 8c-2-4-6-8-10-8H14c-4 0-6 4-6 8v12Z"/><path fill="#fff" opacity=".1" d="M12 24v116c0 1 .5 2 1 2h150c.5 0 1-1 1-2V24H12Z"/></svg><span class="folder-name">어릴 때부터 현재까지</span></a>
-      <a class="folder" href="#balance"><svg class="folder-art" viewBox="0 0 176 144"><path fill="#00b7ff" d="M8 20V136c0 4 2 8 6 8h148c4 0 6-4 6-8V28c0-4-2-8-6-8H72L64 8c-2-4-6-8-10-8H14c-4 0-6 4-6 8v12Z"/><path fill="#fff" opacity=".1" d="M12 24v116c0 1 .5 2 1 2h150c.5 0 1-1 1-2V24H12Z"/></svg><span class="folder-name">밸런스게임</span></a>
-      <a class="folder" href="#profile"><svg class="folder-art" viewBox="0 0 176 144"><path fill="#00b7ff" d="M8 20V136c0 4 2 8 6 8h148c4 0 6-4 6-8V28c0-4-2-8-6-8H72L64 8c-2-4-6-8-10-8H14c-4 0-6 4-6 8v12Z"/><path fill="#fff" opacity=".1" d="M12 24v116c0 1 .5 2 1 2h150c.5 0 1-1 1-2V24H12Z"/></svg><span class="folder-name">기본 프로필</span></a>
-      <a class="folder" href="#playlist"><svg class="folder-art" viewBox="0 0 176 144"><path fill="#00b7ff" d="M8 20V136c0 4 2 8 6 8h148c4 0 6-4 6-8V28c0-4-2-8-6-8H72L64 8c-2-4-6-8-10-8H14c-4 0-6 4-6 8v12Z"/><path fill="#fff" opacity=".1" d="M12 24v116c0 1 .5 2 1 2h150c.5 0 1-1 1-2V24H12Z"/></svg><span class="folder-name">플레이리스트</span></a>
+      <a class="folder" href="#photos"><img class="folder-art" src="https://i.ifh.cc/ypLnBN.png" alt="사진 폴더"><span class="folder-name">어릴 때부터 현재까지</span></a>
+      <a class="folder" href="#balance"><img class="folder-art" src="https://i.ifh.cc/ypLnBN.png" alt="밸런스 폴더"><span class="folder-name">밸런스게임</span></a>
+      <a class="folder" href="#profile"><img class="folder-art" src="https://i.ifh.cc/ypLnBN.png" alt="프로필 폴더"><span class="folder-name">기본 프로필</span></a>
+      <a class="folder" href="#playlist"><img class="folder-art" src="https://i.ifh.cc/ypLnBN.png" alt="플레이리스트 폴더"><span class="folder-name">플레이리스트</span></a>
     </section>
   </main>
-  <footer class="message-footer"><a href="#message"><i class="message-mark"></i><span>은찬에게 한마디 남기기</span><small>0개</small></a></footer>
+  <footer class="message-footer">
+    <a href="#message">
+      <img src="https://cdn-icons-png.flaticon.com/512/8560/8560560.png" alt="방명록" style="width: 18px; height: auto;">
+      <span>은찬에게 한마디 남기기</span>
+      <small>0개</small>
+    </a>
+  </footer>
   <!-- FEATURE: COMMON_SHELL END / 담당: 가은 / 개인 화면 공통 연결 -->
 
   <!-- FEATURE: PROFILE_PHOTOS START / 담당: 은찬 / 은찬 화면에 표시될 프로필과 인생 사진 -->
@@ -770,7 +780,7 @@
         </aside>
         <div class="playlist-main">
           <header class="playlist-header">
-            <div class="cover">E</div>
+            <div class="cover"><img src="https://image.bugsm.co.kr/album/images/500/201002/20100228.jpg" alt="앨범 커버"></div>
             <div class="playlist-copy">
               <p class="eyebrow">비공개 플레이리스트</p>
               <h1>산들바람</h1>
@@ -789,7 +799,6 @@
               <button type="button" class="music-tool music-tool-lg" aria-label="플레이리스트에 추가">＋</button>
               <button type="button" class="music-tool music-tool-lg" aria-label="더보기">···</button>
             </div>
-            <button type="button" class="music-search" aria-label="검색">검색</button>
           </div>
           <div class="tracks playlist-tracks">
             <div class="track head">
@@ -801,7 +810,7 @@
             </div>
                         <div class="track">
               <span class="track-num">01</span>
-              <span class="mini-cover">살</span>
+              <span class="mini-cover"><img src="https://i.scdn.co/image/ab67616d0000b27316b7441cefd922500ca03ae9" alt=""></span>
               <div class="track-title-cell">
                 <strong>살구잼과 크래커</strong>
                 <span class="track-artist-sub">40</span>
@@ -811,7 +820,7 @@
             </div>
             <div class="track">
               <span class="track-num">02</span>
-              <span class="mini-cover">U</span>
+              <span class="mini-cover"><img src="https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/082/940/711/82940711_1662021504533_1_600x600.JPG" alt=""></span>
               <div class="track-title-cell">
                 <strong>U</strong>
                 <span class="track-artist-sub">OSUN</span>
@@ -821,7 +830,7 @@
             </div>
             <div class="track">
               <span class="track-num">03</span>
-              <span class="mini-cover">로</span>
+              <span class="mini-cover"><img src="https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/082/158/209/82158209_1627452206676_1_600x600.JPG" alt=""></span>
               <div class="track-title-cell">
                 <strong>로맨스의 왕</strong>
                 <span class="track-artist-sub">잔나비</span>
@@ -831,7 +840,7 @@
             </div>
             <div class="track">
               <span class="track-num">04</span>
-              <span class="mini-cover">폭</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/201002/20100228.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>폭죽과 풍선들</strong>
                 <span class="track-artist-sub">검정치마</span>
@@ -841,7 +850,7 @@
             </div>
             <div class="track">
               <span class="track-num">05</span>
-              <span class="mini-cover">L</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/201002/20100228.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>Love Is All</strong>
                 <span class="track-artist-sub">검정치마</span>
@@ -851,7 +860,7 @@
             </div>
             <div class="track">
               <span class="track-num">06</span>
-              <span class="mini-cover">신</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/202371/20237198.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>신나는 잠</strong>
                 <span class="track-artist-sub">잔나비</span>
@@ -861,7 +870,7 @@
             </div>
             <div class="track">
               <span class="track-num">07</span>
-              <span class="mini-cover">E</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/207800/20780035.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>El Capo</strong>
                 <span class="track-artist-sub">YLN Foreign, IKASÉ</span>
@@ -871,7 +880,7 @@
             </div>
             <div class="track">
               <span class="track-num">08</span>
-              <span class="mini-cover">5</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/41251/4125131.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>54321 (Feat. HAEWON of NMIXX)</strong>
                 <span class="track-artist-sub">pH-1, HAEWON</span>
@@ -881,7 +890,7 @@
             </div>
             <div class="track">
               <span class="track-num">09</span>
-              <span class="mini-cover">D</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/41038/4103888.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>Do Nothing</strong>
                 <span class="track-artist-sub">HYUKOH, Sunset Rollercoaster</span>
@@ -891,7 +900,7 @@
             </div>
             <div class="track">
               <span class="track-num">10</span>
-              <span class="mini-cover">I</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/205748/20574811.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>I Love u..r shoes</strong>
                 <span class="track-artist-sub">jisokuryClub</span>
@@ -901,7 +910,7 @@
             </div>
             <div class="track">
               <span class="track-num">11</span>
-              <span class="mini-cover">젊</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/2931/293114.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>젊은 우리사랑</strong>
                 <span class="track-artist-sub">검정치마</span>
@@ -936,12 +945,12 @@
         </aside>
         <div class="playlist-main">
           <header class="playlist-header">
-            <div class="cover cover-likes">♡</div>
+            <div class="cover cover-likes"><img src="https://image.bugsm.co.kr/album/images/500/204904/20490411.jpg" alt="앨범 커버"></div>
             <div class="playlist-copy">
               <p class="eyebrow">비공개 플레이리스트</p>
               <h1>좋아요</h1>
-              <p>은찬이 하트 눌러 저장한 트랙들. 마음에 드는 곡만 모아뒀어요.</p>
-              <small><b>은찬</b> · 11곡</small>
+              <p>은찬이 하트 눌러 저장한 트랙들. (은찬의 음악 스펙트럼은 정말 넓구나~ . .)</p>
+              <small><b>은찬</b> · 3곡</small>
             </div>
           </header>
           <div class="music-controls">
@@ -955,7 +964,6 @@
               <button type="button" class="music-tool music-tool-lg" aria-label="플레이리스트에 추가">＋</button>
               <button type="button" class="music-tool music-tool-lg" aria-label="더보기">···</button>
             </div>
-            <button type="button" class="music-search" aria-label="검색">검색</button>
           </div>
           <div class="tracks playlist-tracks">
             <div class="track head">
@@ -967,7 +975,7 @@
             </div>
                         <div class="track">
               <span class="track-num">01</span>
-              <span class="mini-cover">살</span>
+              <span class="mini-cover"><img src="https://i.scdn.co/image/ab67616d0000b27316b7441cefd922500ca03ae9" alt=""></span>
               <div class="track-title-cell">
                 <strong>살구잼과 크래커</strong>
                 <span class="track-artist-sub">40</span>
@@ -977,7 +985,7 @@
             </div>
             <div class="track">
               <span class="track-num">02</span>
-              <span class="mini-cover">U</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/204904/20490411.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>U</strong>
                 <span class="track-artist-sub">OSUN</span>
@@ -987,7 +995,7 @@
             </div>
             <div class="track">
               <span class="track-num">03</span>
-              <span class="mini-cover">로</span>
+              <span class="mini-cover"><img src="https://image.bugsm.co.kr/album/images/500/40594/4059420.jpg" alt=""></span>
               <div class="track-title-cell">
                 <strong>로맨스의 왕</strong>
                 <span class="track-artist-sub">잔나비</span>

@@ -1,0 +1,11 @@
+{
+  "name": "7team-macbook-pro",
+  "version": "1.0.0",
+  "description": "7조의 MacBook Pro 프로젝트",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

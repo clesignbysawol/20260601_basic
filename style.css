@@ -815,37 +815,6 @@
   margin-right: 4px;
 }
 
-.user-page #playlist .music-search,
-.user-page #playlist-likes .music-search {
-  align-items: center;
-  background: transparent;
-  border: 0;
-  border-radius: 999px;
-  color: #475569;
-  cursor: pointer;
-  display: inline-flex;
-  font-size: 14px;
-  font-weight: 500;
-  gap: 8px;
-  line-height: 1.55;
-  padding: 8px 12px 8px 8px;
-  transition: transform 0.14s ease, opacity 0.14s ease, background 0.14s ease;
-}
-
-.user-page #playlist .music-search:active,
-.user-page #playlist-likes .music-search:active {
-  background: #f1f5f9;
-  opacity: 0.88;
-  transform: scale(0.96);
-}
-
-.user-page #playlist .music-search::before,
-.user-page #playlist-likes .music-search::before {
-  content: "⌕";
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1;
-}
 
 .user-page #playlist .playlist-tracks .track,
 .user-page #playlist-likes .playlist-tracks .track {
@@ -1234,6 +1203,15 @@
   display: block;
   font-size: 13px;
   margin-top: 16px;
+}
+.cover, .mini-cover {
+  overflow: hidden;
+}
+.cover img, .mini-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .music-controls {
   align-items: center;
@@ -2010,33 +1988,35 @@
 
 @media (max-width: 767px) {
   .home-stage {
-    align-items: flex-start;
-    min-height: auto;
+    align-items: center;
+    min-height: calc(100vh - 80px);
     padding: 88px 16px 112px;
   }
 
   .folder-grid {
     gap: 30px 40px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: min(100%, 280px);
+    width: min(100%, 340px);
     margin: 0 auto;
   }
 
-  .folder-grid .folder {
+  .folder-grid .folder,
+  .personal-folders .folder {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: min(112px, 34vw);
+    width: min(140px, 42vw);
   }
 
-  .folder-grid .folder-art {
+  .folder-grid .folder-art,
+  .personal-folders .folder-art {
     width: 100%;
     aspect-ratio: 176 / 144;
     height: auto;
   }
 
   .folder-name {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.35;
     margin-top: 9px;
     white-space: normal;
@@ -2045,6 +2025,9 @@
   }
 
   .personal-stage {
+    align-items: center;
+    display: flex;
+    justify-content: center;
     height: auto;
     min-height: calc(100vh - 52px);
     padding: 88px 16px 120px;
@@ -2058,7 +2041,7 @@
     justify-items: center;
     margin: 0 auto;
     position: static;
-    width: min(100%, 280px);
+    width: min(100%, 340px);
   }
 
   .personal-folders .folder,
