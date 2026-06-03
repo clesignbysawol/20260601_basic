@@ -412,9 +412,19 @@ img {
 }
 
 .modal {
-  align-items: center; background: rgba(0,0,0,.3); backdrop-filter: blur(4px); display: flex;
-  inset: 0; justify-content: center; opacity: 0; padding: 16px; pointer-events: none;
-  position: fixed; transition: opacity .24s ease, visibility 0s linear .24s; visibility: hidden; z-index: 100;
+  align-items: center;
+  background: rgba(0,0,0,.3);
+  backdrop-filter: blur(4px);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  opacity: 0;
+  padding: 16px;
+  pointer-events: none;
+  position: fixed;
+  transition: opacity .24s ease, visibility 0s linear .24s;
+  visibility: hidden;
+  z-index: 100;
 }
 .modal:target {
   opacity: 1;
@@ -429,10 +439,21 @@ img {
   z-index: 1;
 }
 .modal-window {
-  background: #fff; border: 1px solid rgba(148,163,184,.22); border-radius: 18px; box-shadow: var(--shadow-xl);
-  display: flex; flex-direction: column; height: 85vh; max-width: 1024px; opacity: 0; overflow: hidden;
-  position: relative; transform: translateY(18px) scale(.96); transition: opacity .24s ease, transform .24s ease;
-  width: 100%; z-index: 2;
+  background: #fff;
+  border: 1px solid rgba(148,163,184,.22);
+  border-radius: 18px;
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  max-width: 1024px;
+  opacity: 0;
+  overflow: hidden;
+  position: relative;
+  transform: translateY(18px) scale(.96);
+  transition: opacity .24s ease, transform .24s ease;
+  width: 100%;
+  z-index: 2;
 }
 .modal:target .modal-window {
   opacity: 1;

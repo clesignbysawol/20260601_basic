@@ -165,14 +165,18 @@
             <h3>우리의 순간들</h3>
             <p class="sidebar-hint">총 7장</p>
           </div>
-          <nav class="side-links"><a href="#gallery">▣ 전체 사진</a>
-            <a class="active" href="#gallery-work">◷ 작업 과정</a></nav>
+          <nav class="side-links">
+            <a href="#gallery">▣ 전체 사진</a>
+            <a class="active" href="#gallery-work">◷ 작업 과정</a>
+          </nav>
         </aside>
-        <div class="panel"><header class="section-header">
+        <div class="panel">
+          <header class="section-header">
             <p class="eyebrow">Process</p>
             <h2>작업 과정</h2>
             <p>아이디어가 결과물이 되어 가는 순간들. (7장)</p>
-          </header><div class="photo-grid">
+          </header>
+          <div class="photo-grid">
             <article class="photo-card">
               <!-- 사진 클릭 시 CSS-only 확대 화면으로 이동합니다. -->
               <a class="photo-open" href="#image-home-007" aria-label="첫걸음 크게 보기">
@@ -796,8 +800,18 @@
         <a class="modal-close" href="#">×</a>
       </div>
       <div class="modal-body col-layout">
-        <div class="panel"><header class="section-header"><p class="eyebrow">Guestbook</p><h2>모두에게 남긴 한마디</h2></header><div class="empty-state" id="comment-empty">아직 댓글이 없습니다. 처음으로 한마디 남겨보세요.</div><div class="comment-list" id="comment-list" aria-live="polite"></div></div>
-        <form id="comment-form" class="inputbar"><input id="comment-input" type="text" placeholder="댓글을 입력하세요" aria-label="댓글 내용"><button type="submit" class="send-button">↑</button></form>
+        <div class="panel">
+          <header class="section-header">
+            <p class="eyebrow">Guestbook</p>
+            <h2>모두에게 남긴 한마디</h2>
+          </header>
+          <div class="empty-state" id="comment-empty">아직 댓글이 없습니다. 처음으로 한마디 남겨보세요.</div>
+          <div class="comment-list" id="comment-list" aria-live="polite"></div>
+        </div>
+        <form id="comment-form" class="inputbar">
+          <input id="comment-input" type="text" placeholder="댓글을 입력하세요" aria-label="댓글 내용">
+          <button type="submit" class="send-button">↑</button>
+        </form>
       </div>
     </div>
   </section>
