@@ -478,11 +478,7 @@
                 /*----------------------------------------- 밸런스게임 (모바일 최적화) ------------------------------------------------*/
 
 @media (max-width: 640px) {
-  #balance .balance-layout {
-  }
-
-  #balance .panel-card {
-  }
+  
 
   #balance .question-area {
     margin-bottom: 26px;
@@ -526,9 +522,6 @@
 
   #balance .options-box {
     flex-direction: column;
-  }
-
-  #balance .option-btn {
   }
 
   #balance .card-footer {
