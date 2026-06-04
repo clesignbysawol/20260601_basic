@@ -729,79 +729,17 @@ img {
   position: relative;
 }
 .personal-folders {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 120px;
+  justify-items: center;
+  align-content: center;
   height: 600px;
-  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .personal-folders .folder {
-  position: absolute;
-}
-.personal-folders .folder:nth-child(1) {
-  left: 18%;
-  top: 15%;
-}
-.personal-folders .folder:nth-child(2) {
-  right: 18%;
-  top: 15%;
-}
-.personal-folders .folder:nth-child(3) {
-  bottom: 15%;
-  left: 18%;
-}
-.personal-folders .folder:nth-child(4) {
-  bottom: 15%;
-  right: 18%;
-}
-
-                  /*----------------------------------------- 개인 별 어릴 때 사진 창 공통 적용 값 ------------------------------------------------*/
-
-
-.jimin .personal-folders .folder:nth-child(1) {
-  left: 12%;
-  top: 10%;
-}
-.jimin .personal-folders .folder:nth-child(2) {
-  right: 15%;
-  top: 20%;
-}
-.jimin .personal-folders .folder:nth-child(3) {
-  bottom: 20%;
-  left: 20%;
-}
-.jimin .personal-folders .folder:nth-child(4) {
-  bottom: 10%;
-  right: 10%;
-}
-.hayoung .personal-folders .folder:nth-child(1) {
-  left: 15%;
-  top: 20%;
-}
-.hayoung .personal-folders .folder:nth-child(2) {
-  right: 20%;
-  top: 12%;
-}
-.hayoung .personal-folders .folder:nth-child(3) {
-  bottom: 12%;
-  left: 22%;
-}
-.hayoung .personal-folders .folder:nth-child(4) {
-  bottom: 18%;
-  right: 14%;
-}
-.gaeun .personal-folders .folder:nth-child(1) {
-  left: 20%;
-  top: 18%;
-}
-.gaeun .personal-folders .folder:nth-child(2) {
-  right: 12%;
-  top: 10%;
-}
-.gaeun .personal-folders .folder:nth-child(3) {
-  bottom: 15%;
-  left: 15%;
-}
-.gaeun .personal-folders .folder:nth-child(4) {
-  bottom: 20%;
-  right: 20%;
+  position: relative;
 }
 
                   /*----------------------------------------- 메세지 푸터 ------------------------------------------------*/
@@ -846,7 +784,8 @@ img {
 }
 
 
-                  /*----------------------------------------- 모바일 최적화를 해 봅시다 ------------------------------------------------*/
+                  /*----------------------------------------- 모바일 최적화를 해 봅시다 . . 
+                  모바일 기준으로 튀는 파트들은 하나 하나 수정하자 ------------------------------------------------*/
 
 
 @media (max-width: 767px) {

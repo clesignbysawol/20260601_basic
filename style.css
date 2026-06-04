@@ -12,6 +12,8 @@
   overflow: hidden;
 }
 
+                /*----------------------------------------- 밸런스게임 (헤더)------------------------------------------------*/
+
 #balance .modal-titlebar {
   background: #fff;
   border-radius: 18px 18px 0 0;
@@ -22,12 +24,14 @@
   font-weight: 500;
 }
 
+                /*----------------------------------------- 밸런스게임 (좌측 바)------------------------------------------------*/
+
 #balance .balance-tab,
 #balance .reason-checker {
   display: none;
 }
 
-/*밸런스 창 (내부 레이아웃 - 카드)*/
+                /*----------------------------------------- 밸런스게임 (내부 레이아웃 - 카드)------------------------------------------------*/
 
 #balance .balance-layout {
   overflow: visible;
@@ -41,7 +45,8 @@
   overflow: visible;
 }
 
-/*밸런스 창 (좌측 패널 디자인)*/
+                /*----------------------------------------- 밸런스게임 (좌측 패널 디자인)------------------------------------------------*/
+
 #balance .panel-card {
   position: absolute;
   inset: 28px 32px 64px;
@@ -53,12 +58,13 @@
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-/*밸런스 창
+                /*----------------------------------------- 밸런스게임 (카드 전환)------------------------------------------------*/
 
-(카드 전환, *pointer-events = 마우스 눌림 방지,
-카드가 쌓여있는 구조라, 첫 카드를 누를 때는 뒤 카드가
-동시에 눌리지 않도록 해당 태그를 쓴 것 맞지예?)*/
+                /*(카드 전환, *pointer-events = 마우스 눌림 방지,
+                카드가 쌓여있는 구조라, 첫 카드를 누를 때는 뒤 카드가
+                동시에 눌리지 않도록 해당 태그를 쓴 것 맞지예?)*/
 
+/* ── 밸런스 내용 맞춰서 카드 크기 수정 ── */
 #balance #tab1:checked ~ .balance-layout .card1,
 #balance #tab2:checked ~ .balance-layout .card2,
 #balance #tab3:checked ~ .balance-layout .card3,
@@ -71,7 +77,8 @@
   inset: auto;
 }
 
-/* ── 밸런스 창 질문 헤더 ── */
+/* ── 밸런스 창 질문 영역 - 앞면 ── */
+
 #balance .question-area {
   margin-bottom: 24px;
   flex-shrink: 0;
@@ -103,6 +110,7 @@
 }
 
 /*밸런스 양쪽 버튼*/
+
 #balance .nav-arrow {
   align-items: center;
   background: #fff;
@@ -176,10 +184,14 @@
   width: 100%;
 }
 
+/* ── 밸런스 창 프론트 회전 및 포지션 ── */
+
 #balance .card-face-front {
   position: relative;
   transform: rotateY(0deg);
 }
+
+/* ── 밸런스 창 뒷면 포지션 ── */
 
 #balance .card-face-back {
   display: flex;
@@ -279,6 +291,8 @@
   transition: all 0.2s ease;
 }
 
+/* ── 밸런스 옵션 버튼 : 선택된 버튼에 대한 색상 값 ── */
+
 #balance .option-btn.selected {
   background: #fff;
   border-color: var(--user-color);
@@ -304,14 +318,16 @@
   display: flex;
 }
 
-/*밸런스 카드 뒷면 이유*/
+                /*----------------------------------------- 밸런스게임 (뒷면) ------------------------------------------------*/
 
+/*밸런스 카드 뒷면 헤더*/
 #balance .reason-header {
   display: block;
   flex-shrink: 0;
   margin-bottom: 24px;
 }
 
+/*밸런스 카드 뒷면 분류*/
 #balance .reason-label {
   color: #8b95a1;
   font-size: 11px;
@@ -322,6 +338,7 @@
   text-transform: uppercase;
 }
 
+/*밸런스 카드 뒷면 타이틀*/
 #balance .reason-title {
   color: #1a1a1a;
   font-size: clamp(16px, 2.4vw, 20px);
@@ -331,6 +348,7 @@
   margin: 0;
 }
 
+/*밸런스 카드 우리가 답한 내용*/
 #balance .card-face-back .answer-view {
   display: flex;
   flex-direction: column;
@@ -376,13 +394,14 @@
   width: min(100%, 400px);
 }
 
+/*밸런스 카드 플립*/
 @media (prefers-reduced-motion: reduce) {
   #balance .card-flip-inner {
     transition: none;
   }
 }
 
-/*밸런스 카드 푸터 (하단 내용)*/
+                /*----------------------------------------- 밸런스게임 (푸터) ------------------------------------------------*/
 
 #balance .card-footer {
   align-items: center;
@@ -456,7 +475,7 @@
   width: 28px;
 }
 
-/*밸런스 파트 모바일 최적화*/
+                /*----------------------------------------- 밸런스게임 (모바일 최적화) ------------------------------------------------*/
 
 @media (max-width: 640px) {
   #balance .balance-layout {
@@ -554,6 +573,9 @@
   padding: 32px 32px 70px;
   text-align: center;
 }
+
+                /*----------------------------------------- 프로필 이미지 ------------------------------------------------*/
+
 .avatar {
   align-items: center;
   background: #fff;
@@ -573,24 +595,31 @@
   object-fit: cover;
   width: 100%;
 }
+
+                /*----------------------------------------- 프로필 하단 레이아웃 ------------------------------------------------*/
+
 .profile-content h1 {
   font-size: 30px;
   letter-spacing: -.02em;
   margin-top: 28px;
 }
+
 .profile-content .english {
   color: var(--ink-500);
   font-size: 13px;
   margin-top: 6px;
 }
+
 .divider {
   background: var(--user-border);
   height: 1px;
   margin: 40px 0 32px;
 }
+
 .profile-fields {
   text-align: left;
 }
+
 .profile-fields div {
   align-items: baseline;
   border-bottom: 1px solid var(--user-border);
@@ -598,31 +627,41 @@
   gap: 24px;
   padding: 15px 0;
 }
+
 .profile-fields div:first-child {
   border-top: 1px solid var(--user-border);
 }
+
+                /*----------------------------------------- 클래스명 왜 이렇게 지었지요 . . ? (길게 이어지는 내용들) ------------------------------------------------*/
+
 .profile-fields dt {
   color: var(--ink-500);
   font-size: 12.5px;
   width: 88px;
 }
+
 .profile-fields dd {
   font-size: 15px;
   font-weight: 500;
 }
+
 .profile-section {
   margin-top: 44px;
   text-align: left;
 }
+
 .profile-section h2 {
   font-size: 14px;
 }
+
 .profile-section p {
   color: var(--ink-800);
   font-size: 15px;
   line-height: 1.75;
   margin-top: 14px;
 }
+                /*----------------------------------------- 프로필 버킷리스트 ------------------------------------------------*/
+
 .bucket li {
   border-bottom: 1px solid var(--user-border);
   color: var(--ink-800);
@@ -631,6 +670,7 @@
   gap: 20px;
   padding: 15px 0;
 }
+
 .bucket li:first-child {
   border-top: 1px solid var(--user-border);
   margin-top: 18px;
@@ -641,7 +681,7 @@
   width: 24px;
 }
 
-/*--------------------------- 스크린타임) ---------------------------*/
+                /*----------------------------------------- 프로필 스크린타임 ------------------------------------------------*/
 
 .profile-screentime-section {
   padding: 60px 0 20px 0;
@@ -709,6 +749,8 @@
   display: block;
 }
 
+                /*----------------------------------------- 프로필 스크린타임 바 디자인 ------------------------------------------------*/
+
 .screentime-bar {
   height: 100%;
   background-color: var(--user-color);
@@ -737,6 +779,7 @@
 }
 
                   /* =============================== 플레이리스트 ===================================== */
+                  /* =============================== 플레이리스트 기본 디자인 ===================================== */
 
 .playlist-panel {
   background: #fff;
@@ -749,99 +792,546 @@
   border-color: #e2e8f0;
   color: #1e293b;
 }
-.playlist-panel .sidebar h3 { color: #0f172a; }
-.playlist-panel .eyebrow, .playlist-panel .sidebar-hint { color: #64748b; }
-.playlist-panel .side-links a { color: #334155; }
-.playlist-panel .side-links a.active { background: var(--user-color); color: var(--user-on-color, #fff); }
-.playlist-panel .side-links a:not(.active):hover { background: color-mix(in srgb, var(--user-color) 14%, #fff); }
 
-.playlist-main { flex: 1; min-width: 0; overflow: auto; background: #fff; }
+.playlist-panel .sidebar h3 {
+  color: #0f172a;
+}
+
+.playlist-panel .eyebrow, .playlist-panel .sidebar-hint {
+  color: #64748b;
+}
+
+.playlist-panel .side-links a {
+  color: #334155;
+}
+
+.playlist-panel .side-links a.active {
+  background: var(--user-color);
+  color: var(--user-on-color, #fff);
+}
+
+.playlist-panel .side-links a:not(.active):hover {
+  background: color-mix(in srgb, var(--user-color) 14%, #fff); }
+
+.playlist-main {
+  flex: 1; min-width: 0;
+  overflow: auto;
+  background: #fff;
+}
+
 .playlist-header {
   align-items: end;
   background: linear-gradient(180deg, var(--user-tint) 0%, #fff 100%);
   display: flex; gap: 25px; padding: 36px;
 }
-.playlist-copy .eyebrow { color: #94a3b8; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; margin-bottom: 8px; }
-.playlist-copy h1 { color: #0f172a; font-size: clamp(34px, 5vw, 56px); letter-spacing: -0.035em; line-height: 1.02; margin: 9px 0 13px; }
-.playlist-copy p { color: #64748b; font-size: 14px; line-height: 1.55; }
-.playlist-copy small { color: #475569; display: block; font-size: 13px; margin-top: 16px; }
 
-.cover, .mini-cover { overflow: hidden; background: var(--cover); color: var(--user-on-color, #fff); display: flex; justify-content: center; align-items: center; }
-.cover { border-radius: 6px; box-shadow: 0 16px 36px -12px rgba(0,0,0,.7); font-size: 64px; font-weight: 800; height: 200px; width: 200px; flex-shrink: 0; }
-.mini-cover { border-radius: 4px; font-size: 14px; height: 40px; width: 40px; }
-.cover img, .mini-cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.cover-likes { background: color-mix(in srgb, var(--user-color) 22%, #fff); color: var(--user-accent); font-size: 72px; line-height: 1; }
+.playlist-copy .eyebrow {
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
 
-.music-controls { align-items: center; background: #fff; border-bottom: 1px solid #e2e8f0; display: flex; gap: 20px; padding: 22px 36px 16px; justify-content: space-between; }
-.music-controls-left { align-items: center; display: flex; gap: 8px; }
-.play { background: var(--user-color); color: var(--user-on-color, #fff); border-radius: 50%; display: flex; font-size: 24px; height: 56px; justify-content: center; align-items: center; width: 56px; margin-right: 4px; border: 0; cursor: pointer; transition: all 0.14s ease; }
-.play:active { opacity: 0.88; transform: scale(0.9); box-shadow: 0 2px 8px color-mix(in srgb, var(--user-color) 45%, transparent); }
-.music-tool { align-items: center; background: transparent; color: #475569; display: inline-flex; font-size: 24px; height: 48px; justify-content: center; width: 48px; border: 0; cursor: pointer; transition: all 0.14s ease; }
-.music-tool-lg { font-size: 30px; height: 52px; width: 52px; }
-.music-tool:not(.music-tool-heart):active { opacity: 0.88; transform: scale(0.9); }
+/* calamp : 텍스트 최소 및 최대값 (작은 화면 / 기본 / 큰화면) */
 
-.heart-checker { display: none; }
-.music-tool-heart { cursor: pointer; }
-.heart-icon { display: block; font-size: 0; line-height: 1; transition: transform 0.14s ease; }
-.heart-icon::before { color: #475569; content: "♡"; display: block; font-size: 24px; transition: color 0.25s ease, transform 0.25s ease; }
-.heart-checker:checked + .heart-icon::before { color: #ef4444; content: "♥"; transform: scale(1.1); }
-.music-tool-heart:active .heart-icon::before { transform: scale(0.9); }
+.playlist-copy h1 {
+  color: #0f172a;
+  font-size: clamp(34px, 5vw, 56px);
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  margin: 9px 0 13px;
+}
 
-.tracks { background: #fff; padding: 8px 28px 40px; }
-.track { align-items: center; border-radius: 4px; color: #64748b; display: grid; font-size: 13px; gap: 6px; grid-template-columns: 24px 44px minmax(130px, 2.4fr) minmax(84px, 1.1fr) 40px; padding: 8px 12px; }
-.track.head { border-bottom: 1px solid #e2e8f0; color: #94a3b8; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
-.track:not(.head):hover { background: #f8fafc; }
-.track strong { color: #0f172a; font-size: 14px; font-weight: 600; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.track-title-cell { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
-.track-artist-sub { color: #64748b; font-size: 12px; line-height: 1.35; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.artist-col, .artist-col-head { color: #475569; font-size: 13px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.track-num, .track-time { color: #94a3b8; font-size: 13px; text-align: center; }
-.track-time { text-align: right; }
-.track-time-head { font-size: 16px; text-align: right; }
+.playlist-copy p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.playlist-copy small {
+  color: #475569;
+  display: block;
+  font-size: 13px;
+  margin-top: 16px;
+}
+
+.cover, .mini-cover {
+  overflow: hidden;
+  background: var(--cover);
+  color: var(--user-on-color, #fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover {
+  border-radius: 6px;
+  box-shadow: 0 16px 36px -12px rgba(0,0,0,.7);
+  font-size: 64px;
+  font-weight: 800;
+  height: 200px;
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.mini-cover {
+  border-radius: 4px;
+  font-size: 14px;
+  height: 40px;
+  width: 40px;
+}
+
+.cover img,
+.mini-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover-likes {
+  background: color-mix(in srgb, var(--user-color) 22%, #fff);
+  color: var(--user-accent);
+  font-size: 72px;
+  line-height: 1;
+}
+
+.music-controls {
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  gap: 20px;
+  padding: 22px 36px 16px;
+  justify-content: space-between;
+}
+
+.music-controls-left {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.play {
+  background: var(--user-color);
+  color: var(--user-on-color, #fff);
+  border-radius: 50%;
+  display: flex;
+  font-size: 24px;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  margin-right: 4px;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+
+.play:active {
+  opacity: 0.88;
+  transform: scale(0.9);
+  box-shadow: 0 2px 8px color-mix(
+    in srgb,
+    var(--user-color) 45%,
+    transparent
+  );
+}
+
+.music-tool {
+  align-items: center;
+  background: transparent;
+  color: #475569;
+  display: inline-flex;
+  font-size: 24px;
+  height: 48px;
+  justify-content: center;
+  width: 48px;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+
+.music-tool-lg {
+  font-size: 30px;
+  height: 52px;
+  width: 52px;
+}
+
+.music-tool:not(.music-tool-heart):active {
+  opacity: 0.88;
+  transform: scale(0.9);
+}
+
+.heart-checker {
+  display: none;
+}
+
+.music-tool-heart {
+  cursor: pointer;
+}
+
+.heart-icon {
+  display: block;
+  font-size: 0;
+  line-height: 1;
+  transition: transform 0.14s ease;
+}
+
+.heart-icon::before {
+  color: #475569;
+  content: "♡";
+  display: block;
+  font-size: 24px;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.heart-checker:checked + .heart-icon::before {
+  color: #ef4444;
+  content: "♥";
+  transform: scale(1.1);
+}
+
+.music-tool-heart:active .heart-icon::before {
+  transform: scale(0.9);
+}
+
+.tracks {
+  background: #fff;
+  padding: 8px 28px 40px;
+}
+
+.track {
+  align-items: center;
+  border-radius: 4px;
+  color: #64748b;
+  display: grid;
+  font-size: 13px;
+  gap: 6px;
+  grid-template-columns:
+    24px
+    44px
+    minmax(130px, 2.4fr)
+    minmax(84px, 1.1fr)
+    40px;
+  padding: 8px 12px;
+}
+
+.track.head {
+  border-bottom: 1px solid #e2e8f0;
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.track:not(.head):hover {
+  background: #f8fafc;
+}
+
+.track strong {
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.track-title-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.track-artist-sub {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.artist-col,
+.artist-col-head {
+  color: #475569;
+  font-size: 13px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.track-num,
+.track-time {
+  color: #94a3b8;
+  font-size: 13px;
+  text-align: center;
+}
+
+.track-time {
+  text-align: right;
+}
+
+.track-time-head {
+  font-size: 16px;
+  text-align: right;
+}
 
                   /* =============================== 캘린더 ===================================== */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 140px;
+  gap: 2px;
+  background-color: #e2e8f0;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
 
-.calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); grid-auto-rows: 140px; gap: 2px; background-color: #e2e8f0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; margin-bottom: 40px; }
-.grid-header { background-color: #f8fafc; padding: 10px; text-align: center; font-size: 13px; font-weight: 600; color: #475569; height: auto; }
-.grid-day { background-color: #ffffff; padding: 8px; display: flex; flex-direction: column; gap: 4px; overflow-y: auto; box-sizing: border-box; }
-.grid-day.blank { background-color: #f1f5f9; }
-.day-label { font-size: 12px; font-weight: 700; color: #64748b; margin-bottom: 2px; }
-.mini-badge { font-size: 11px; padding: 4px 6px; border-radius: 4px; font-weight: 500; display: block; white-space: normal; word-break: break-all; }
-.mini-badge.gray { background-color: #f1f5f9; color: #334155; }
-.mini-badge.red { background-color: #fef2f2; color: #ef4444; border-left: 2px solid #ef4444; }
-.calendar-event-bar { font-size: 11px; font-weight: 600; padding: 5px 8px; border-radius: 4px; width: 100%; box-sizing: border-box; margin-top: auto; white-space: normal; word-break: break-all; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
-.calendar-event-bar.blue { background-color: #e0f2fe; color: #0369a1; border-left: 3px solid #0284c7; }
-.calendar-event-bar.dark { background-color: #f1f5f9; color: #1e293b; border-left: 3px solid #475569; }
-.calendar-event-bar.green { background-color: #dcfce7; color: #15803d; border-left: 3px solid #16a34a; }
-.calendar-event-bar.orange { background-color: #ffedd5; color: #c2410c; border-left: 3px solid #ea580c; }
-.cal-nav { display: inline-flex; align-items: center; gap: 6px; margin-left: 14px; }
-.cal-btn { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 1px solid #cbd5e1; border-radius: 6px; background-color: #ffffff; color: #334155; text-decoration: none; font-weight: bold; font-size: 13px; transition: background-color 0.2s; }
-.cal-btn:hover { background-color: #f1f5f9; }
-.cal-btn.disabled { opacity: 0.3; pointer-events: none; }
+.grid-header {
+  background-color: #f8fafc;
+  padding: 10px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  height: auto;
+}
 
+.grid-day {
+  background-color: #ffffff;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
 
-.calendar-header { display: flex; align-items: center; justify-content: space-between; }
-.calendar-header h2 { display: inline-block; margin: 0; vertical-align: middle; }
-.grid-header.sunday { color: #ef4444; }
-.grid-day.highlight-orange { background-color: #fff7ed; }
-.day-label.highlight-orange { color: #ea580c; }
-.mini-badge.orange-solid { background-color: #ea580c; color: white; text-align: center; font-weight: bold; }
+.grid-day.blank {
+  background-color: #f1f5f9;
+}
 
-.timeline-list { display: flex; flex-direction: column; gap: 24px; margin-top: 30px; }
-.timeline-item { display: flex; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px; }
-.timeline-item.highlight-blue { background-color: #f8fafc; padding-left: 8px; border-left: 4px solid #3b82f6; }
-.timeline-item.highlight-orange { background-color: #fff7ed; padding-left: 8px; border-left: 4px solid #f97316; border-radius: 4px; }
-.timeline-date { width: 100px; flex-shrink: 0; }
-.timeline-date h3 { margin: 0; font-size: 24px; font-weight: 700; line-height: 1; }
-.timeline-item.highlight-blue .timeline-date h3 { color: #2563eb; }
-.timeline-item.highlight-orange .timeline-date h3 { color: #ea580c; }
-.timeline-date span { font-size: 11px; color: #94a3b8; font-weight: bold; text-transform: uppercase; }
-.timeline-item.highlight-blue .timeline-date span { color: #3b82f6; }
-.timeline-item.highlight-orange .timeline-date span { color: #f97316; }
-.timeline-content h4 { margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: #1e293b; }
-.timeline-item.highlight-orange .timeline-content h4 { color: #c2410c; }
-.timeline-content p { margin: 0; font-size: 13px; color: #64748b; }
-.timeline-item.highlight-orange .timeline-content p { color: #9a3412; font-weight: 500; }
+.day-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+  margin-bottom: 2px;
+}
+
+.mini-badge {
+  font-size: 11px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-weight: 500;
+  display: block;
+  white-space: normal;
+  word-break: break-all;
+}
+
+.mini-badge.gray {
+  background-color: #f1f5f9;
+  color: #334155;
+}
+
+.mini-badge.red {
+  background-color: #fef2f2;
+  color: #ef4444;
+  border-left: 2px solid #ef4444;
+}
+
+.calendar-event-bar {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 8px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+  white-space: normal;
+  word-break: break-all;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.calendar-event-bar.blue {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border-left: 3px solid #0284c7;
+}
+
+.calendar-event-bar.dark {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  border-left: 3px solid #475569;
+}
+
+.calendar-event-bar.green {
+  background-color: #dcfce7;
+  color: #15803d;
+  border-left: 3px solid #16a34a;
+}
+
+.calendar-event-bar.orange {
+  background-color: #ffedd5;
+  color: #c2410c;
+  border-left: 3px solid #ea580c;
+}
+
+.cal-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 14px;
+}
+
+.cal-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #334155;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  transition: background-color 0.2s;
+}
+
+.cal-btn:hover {
+  background-color: #f1f5f9;
+}
+
+.cal-btn.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calendar-header h2 {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.grid-header.sunday {
+  color: #ef4444;
+}
+
+.grid-day.highlight-orange {
+  background-color: #fff7ed;
+}
+
+.day-label.highlight-orange {
+  color: #ea580c;
+}
+
+.mini-badge.orange-solid {
+  background-color: #ea580c;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.timeline-item {
+  display: flex;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 16px;
+}
+
+.timeline-item.highlight-blue {
+  background-color: #f8fafc;
+  padding-left: 8px;
+  border-left: 4px solid #3b82f6;
+}
+
+.timeline-item.highlight-orange {
+  background-color: #fff7ed;
+  padding-left: 8px;
+  border-left: 4px solid #f97316;
+  border-radius: 4px;
+}
+
+.timeline-date {
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.timeline-date h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.timeline-item.highlight-blue .timeline-date h3 {
+  color: #2563eb;
+}
+
+.timeline-item.highlight-orange .timeline-date h3 {
+  color: #ea580c;
+}
+
+.timeline-date span {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.timeline-item.highlight-blue .timeline-date span {
+  color: #3b82f6;
+}
+
+.timeline-item.highlight-orange .timeline-date span {
+  color: #f97316;
+}
+
+.timeline-content h4 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.timeline-item.highlight-orange .timeline-content h4 {
+  color: #c2410c;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.timeline-item.highlight-orange .timeline-content p {
+  color: #9a3412;
+  font-weight: 500;
+}
 
                   /* =============================== 방명록 / 댓글 ===================================== */
                   
@@ -908,52 +1398,212 @@
   /* =============================== 처음엔 % 로 접근하다가 모바일 기준으로 전체 다듬었읍니다 . . ===================================== */
 
 @media (max-width: 767px) {
-  .home-stage { align-items: center; min-height: calc(100vh - 80px); padding: 88px 16px 112px; }
-  .personal-folders .folder { display: flex; flex-direction: column; align-items: center; width: min(140px, 42vw); }
-  .personal-folders .folder-art { width: 100%; aspect-ratio: 176 / 144; height: auto; }
-  
-  .personal-stage { align-items: center; display: flex; justify-content: center; height: auto; min-height: calc(100vh - 52px); padding: 88px 16px 120px; }
-  .personal-folders { display: grid; gap: 34px 40px; grid-template-columns: repeat(2, minmax(0, 1fr)); height: auto; justify-items: center; margin: 0 auto; position: static; width: min(100%, 340px); }
-  .personal-folders .folder, .personal-folders .folder:nth-child(1), .personal-folders .folder:nth-child(2), .personal-folders .folder:nth-child(3), .personal-folders .folder:nth-child(4) {
-    bottom: auto !important; left: auto !important; position: static; right: auto !important; top: auto !important;
+  .home-stage {
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    padding: 88px 16px 112px;
   }
-  
-  .modal { padding: 8px; }
-  .modal-window { border-radius: 14px; height: 92vh; max-width: none; width: 100%; }
-  .section-header { margin-bottom: 20px; }
-  .section-header h2 { font-size: 20px; }
-  .section-header[style] { align-items: flex-start !important; flex-direction: column !important; gap: 10px; }
-  .photo-caption { padding: 9px 9px 11px; }
-  .photo-caption small { line-height: 1.45; }
-  
-  .calendar-grid { grid-auto-rows: 116px; min-width: 620px; }
-  .grid-header, .grid-day { padding: 6px; }
-  .calendar-event-bar, .mini-badge { font-size: 10px; line-height: 1.35; padding: 4px 5px; }
-  .cal-nav { margin-left: 0; margin-top: 8px; }
-  
-  .inputbar { gap: 8px; padding: 12px; }
-  .inputbar input { min-width: 0; padding: 10px 12px; }
-  
-  .profile-content { padding: 24px 18px 56px; }
-  .profile-fields div { align-items: flex-start; flex-direction: column; gap: 5px; }
-  .profile-fields dt { width: auto; }
-  .bucket li { gap: 12px; line-height: 1.55; }
-  
-  .screentime-header-row { align-items: flex-start; flex-direction: column; gap: 12px; margin-bottom: 28px; }
-  .screentime-meta { text-align: left !important; width: 100%; }
-  .screentime-list { gap: 24px; }
-  .screentime-track { height: 38px; }
-  .screentime-bar { font-size: 13px; min-width: 72px !important; padding-left: 14px; }
-  .screentime-desc { padding-left: 0; }
-  
-  .user-page #playlist .playlist-header, .user-page #playlist-likes .playlist-header, .playlist-header { align-items: flex-start; flex-direction: column; gap: 18px; padding: 24px 18px; }
-  .user-page #playlist .cover, .user-page #playlist-likes .cover, .cover { height: 144px; width: 144px; }
-  .user-page #playlist .music-controls, .user-page #playlist-likes .music-controls, .music-controls { gap: 14px; overflow-x: auto; padding: 18px; }
-  .user-page #playlist .tracks, .user-page #playlist-likes .tracks, .tracks { padding: 8px 10px 32px; }
-  .user-page #playlist .playlist-tracks .track, .user-page #playlist-likes .playlist-tracks .track, .track { gap: 8px; grid-template-columns: 22px 38px minmax(0, 1fr) 44px; padding: 8px 6px; }
-  .user-page #playlist .playlist-tracks .track .artist-col, .user-page #playlist .playlist-tracks .track .artist-col-head, .user-page #playlist-likes .playlist-tracks .track .artist-col, .user-page #playlist-likes .playlist-tracks .track .artist-col-head { display: none; }
-  .track-title-cell, .track strong { min-width: 0; }
 
+  .personal-folders .folder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(140px, 42vw);
+  }
+
+  .personal-folders .folder-art {
+  width: 100%;
+  aspect-ratio: 176 / 144;
+  height: auto;
+}
+
+.personal-stage {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  min-height: calc(100vh - 52px);
+  padding: 88px 16px 120px;
+}
+
+.personal-folders {
+  display: grid;
+  gap: 34px 40px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  height: auto;
+  justify-items: center;
+  margin: 0 auto;
+  position: static;
+  width: min(100%, 340px);
+}
+
+.modal {
+  padding: 8px;
+}
+
+.modal-window {
+  border-radius: 14px;
+  height: 92vh;
+  max-width: none;
+  width: 100%;
+}
+
+.section-header {
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 20px;
+}
+
+.section-header[style] {
+  align-items: flex-start !important;
+  flex-direction: column !important;
+  gap: 10px;
+}
+
+.photo-caption {
+  padding: 9px 9px 11px;
+}
+
+.photo-caption small {
+  line-height: 1.45;
+}
+
+.calendar-grid {
+  grid-auto-rows: 116px;
+  min-width: 620px;
+}
+
+.grid-header,
+.grid-day {
+  padding: 6px;
+}
+
+.calendar-event-bar,
+.mini-badge {
+  font-size: 10px;
+  line-height: 1.35;
+  padding: 4px 5px;
+}
+
+.cal-nav {
+  margin-left: 0;
+  margin-top: 8px;
+}
+
+.inputbar {
+  gap: 8px;
+  padding: 12px;
+}
+
+.inputbar input {
+  min-width: 0;
+  padding: 10px 12px;
+}
+
+.profile-content {
+  padding: 24px 18px 56px;
+}
+
+.profile-fields div {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.profile-fields dt {
+  width: auto;
+}
+
+.bucket li {
+  gap: 12px;
+  line-height: 1.55;
+}
+
+.screentime-header-row {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.screentime-meta {
+  text-align: left !important;
+  width: 100%;
+}
+
+.screentime-list {
+  gap: 24px;
+}
+
+.screentime-track {
+  height: 38px;
+}
+
+.screentime-bar {
+  font-size: 13px;
+  min-width: 72px !important;
+  padding-left: 14px;
+}
+
+.screentime-desc {
+  padding-left: 0;
+}
+
+.user-page #playlist .playlist-header,
+.user-page #playlist-likes .playlist-header,
+.playlist-header {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px 18px;
+}
+
+.user-page #playlist .cover,
+.user-page #playlist-likes .cover,
+.cover {
+  height: 144px;
+  width: 144px;
+}
+
+.user-page #playlist .music-controls,
+.user-page #playlist-likes .music-controls,
+.music-controls {
+  gap: 14px;
+  overflow-x: auto;
+  padding: 18px;
+}
+
+.user-page #playlist .tracks,
+.user-page #playlist-likes .tracks,
+.tracks {
+  padding: 8px 10px 32px;
+}
+
+.user-page #playlist .playlist-tracks .track,
+.user-page #playlist-likes .playlist-tracks .track,
+.track {
+  gap: 8px;
+  grid-template-columns:
+    22px
+    38px
+    minmax(0, 1fr)
+    44px;
+  padding: 8px 6px;
+}
+
+.user-page #playlist .playlist-tracks .track .artist-col,
+.user-page #playlist .playlist-tracks .track .artist-col-head,
+.user-page #playlist-likes .playlist-tracks .track .artist-col,
+.user-page #playlist-likes .playlist-tracks .track .artist-col-head {
+  display: none;
+}
+
+.track-title-cell,
+.track strong {
+  min-width: 0;
+}
   .modal-titlebar {
     gap: 10px;
     min-height: 56px;
@@ -989,6 +1639,7 @@
     transform: none;
     pointer-events: none;
   }
+
   #balance #tab1:checked ~ .balance-layout .card1,
   #balance #tab2:checked ~ .balance-layout .card2,
   #balance #tab3:checked ~ .balance-layout .card3,
@@ -998,6 +1649,7 @@
     opacity: 1;
     pointer-events: auto;
   }
+
   #balance .carousel-row {
     position: relative;
     display: flex;
@@ -1006,12 +1658,14 @@
     justify-content: center;
     width: 100%;
   }
+
   #balance .card-inside {
     width: calc(100% - 76px);
     flex: 0 0 auto;
     padding: 0;
     margin: 0 auto;
   }
+
   #balance .nav-arrow {
     display: flex;
     position: absolute;
@@ -1040,6 +1694,7 @@
     border-radius: 20px;
     box-sizing: border-box;
   }
+  
   #balance .option-btn {
     min-height: 44px;
     padding: 12px 16px;
