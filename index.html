@@ -985,8 +985,7 @@
   <!-- 안녕하세요 백엔드 입니다 댓글 작성을 위해 내용을 추가해 보아요 .. -->
 <script>
 (function () {
-  const storageKey = 'guestbook-comments';
-  const apiPath = '/api/comments';
+  let comments = [];
   const form = document.getElementById('comment-form');
   const input = document.getElementById('comment-input');
   const list = document.getElementById('comment-list');
@@ -996,7 +995,6 @@
     return value.replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
 
-  <!-- 타임스탬프 (댓글 타임) 불러오는 코드-->
   function formatTime(timestamp) {
     return new Date(timestamp).toLocaleString('ko-KR', {
       year: 'numeric',
@@ -1007,8 +1005,8 @@
     });
   }
 
-  function renderComments(comments) {
-    if (!comments || !comments.length) {
+  function renderComments() {
+    if (!comments.length) {
       list.innerHTML = '';
       empty.style.display = 'block';
       return;
@@ -1016,7 +1014,7 @@
 
     empty.style.display = 'none';
     list.innerHTML = comments.map(comment => `
-      <article class="comment-card" data-id="${comment.id || comment.createdAt}">
+      <article class="comment-card" data-id="${comment.id}">
         <button class="delete-btn" aria-label="삭제">✕</button>
         <time>${formatTime(comment.createdAt)}</time>
         <p>${sanitize(comment.text)}</p>
@@ -1024,81 +1022,33 @@
     `).join('');
 
     list.querySelectorAll('.delete-btn').forEach(button => {
-      button.addEventListener('click', async function () {
+      button.addEventListener('click', function () {
         const article = button.closest('.comment-card');
-        const id = article?.getAttribute('data-id');
-        article.remove();
-        if (id) {
-          try {
-            await fetch(`${apiPath}/${encodeURIComponent(id)}`, { method: 'DELETE' });
-          } catch (err) {
-            // ignore
-          }
-        }
-        const remaining = await loadComments();
-        renderComments(remaining);
+        const id = article.getAttribute('data-id');
+        comments = comments.filter(c => String(c.id) !== String(id));
+        renderComments();
       });
     });
   }
 
-  async function getSavedComments() {
-    try {
-      const response = await fetch(apiPath);
-      if (response.ok) {
-        const data = await response.json();
-        if (Array.isArray(data)) return data.filter(c => !c.recipient);
-      }
-    } catch (error) {
-      // fallback to local storage when server is unavailable
-    }
-
-    const saved = localStorage.getItem(storageKey);
-    return saved ? JSON.parse(saved) : [];
-  }
-
-  async function saveComment(comment) {
-    if (!comment.id) comment.id = Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
-    try {
-      const response = await fetch(apiPath, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(comment)
-      });
-      if (response.ok) return;
-    } catch (error) {
-      // fallback to local storage when server is unavailable
-    }
-
-    const current = JSON.parse(localStorage.getItem(storageKey) || '[]');
-    current.unshift(comment);
-    localStorage.setItem(storageKey, JSON.stringify(current));
-  }
-
-  async function loadComments() {
-    const comments = await getSavedComments();
-    renderComments(comments);
-    return comments;
-  }
-
-  form.addEventListener('submit', async function (event) {
+  form.addEventListener('submit', function (event) {
     event.preventDefault();
     const text = input.value.trim();
     if (!text) return;
 
     const comment = {
+      id: Date.now().toString(36) + Math.random().toString(36).slice(2, 8),
       text,
       createdAt: Date.now()
     };
 
-    const comments = await loadComments();
     comments.unshift(comment);
-    renderComments(comments);
+    renderComments();
     input.value = '';
     input.focus();
-    saveComment(comment);
   });
 
-  loadComments();
+  renderComments();
 })();
 </script>
 
