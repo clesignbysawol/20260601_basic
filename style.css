@@ -1,49 +1,6 @@
 
-/*--------------------------- 유저 페이지 값 조절 (최소 사이즈, 배경 색상 설정 - 각 팀원 별 색상 및 공통 색상) ---------------------------*/
-
-.user-page {
-  min-height: 100vh;
-  background: var(--user-tint);
-}
-
-.eunchan {
-  --user-color: #00b7ff;
-  --user-tint: #eef3fb;
-  --user-accent: #2f6ad9;
-  --user-border: #dde6f3;
-  --user-on-color: #fff;
-  --cover: linear-gradient(135deg, #5bc5ff, #0066b3);
-}
-.jimin {
-  --user-color: #ffff00;
-  --user-tint: #faf6e7;
-  --user-accent: #a48207;
-  --user-border: #ecdfb1;
-  --user-on-color: #111;
-  --cover: linear-gradient(135deg, #fff59a, #c8a300);
-}
-.hayoung {
-  --user-color: #0cdfff;
-  --user-tint: #eef7fc;
-  --user-accent: #0f8fc4;
-  --user-border: #dbe9f0;
-  --user-on-color: #fff;
-  --cover: linear-gradient(135deg, #7decff, #006a8c);
-}
-.gaeun {
-  --user-color: #ff4f4f;
-  --user-tint: #fbeeec;
-  --user-accent: #c14a3f;
-  --user-border: #eed1cc;
-  --user-on-color: #fff;
-  --cover: linear-gradient(135deg, #ff8a8a, #b31e1e);
-}
-
                 /*----------------------------------------- 밸런스게임 ------------------------------------------------*/
 
-/*
-개인 페이지 전용 밸런스 · 플레이리스트 스타
- */
 
 /*밸런스 창 (라이트박스)*/
 #balance .balance-window {
@@ -69,7 +26,6 @@
 #balance .reason-checker {
   display: none;
 }
-
 
 /*밸런스 창 (내부 레이아웃 - 카드)*/
 
@@ -146,6 +102,7 @@
   min-height: 0;
 }
 
+/*밸런스 양쪽 버튼*/
 #balance .nav-arrow {
   align-items: center;
   background: #fff;
@@ -179,7 +136,8 @@
   opacity: 0.7;
 }
 
-/* ── Inner question card (3D flip) ── */
+/*밸런스 카드 회전*/
+
 #balance .card-inside {
   background: transparent;
   border: none;
@@ -191,11 +149,13 @@
   padding: 0;
 }
 
+/*perspective = 회전할 때 입체로 보이게 하는 것, 카드가 입체로 보이게 하기 위해 per 값 조절*/
 #balance .card-flip {
   perspective: 1200px;
   width: 100%;
 }
 
+/*cubic : 애니메이션 키프레임 조절*/
 #balance .card-flip-inner {
   min-height: 240px;
   position: relative;
@@ -204,6 +164,7 @@
   width: 100%;
 }
 
+/*backface : 뒷면 볼 때 앞면 어케 할거냐 - 우리는 앞면 숨기겠다*/
 #balance .card-face {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -235,6 +196,8 @@
   transform: rotateY(180deg);
 }
 
+/* 동적 높이 조절: 현재 보이는 면이 박스 높이를 결정하게 함 */
+
 #balance #reason-toggle1:checked ~ .balance-layout .card1 .card-flip-inner,
 #balance #reason-toggle2:checked ~ .balance-layout .card2 .card-flip-inner,
 #balance #reason-toggle3:checked ~ .balance-layout .card3 .card-flip-inner,
@@ -243,7 +206,6 @@
   transform: rotateY(180deg);
 }
 
-/* 동적 높이 조절: 현재 보이는 면이 박스 높이를 결정하게 함 */
 #balance #reason-toggle1:checked ~ .balance-layout .card1 .card-face-front,
 #balance #reason-toggle2:checked ~ .balance-layout .card2 .card-face-front,
 #balance #reason-toggle3:checked ~ .balance-layout .card3 .card-face-front,
@@ -260,6 +222,8 @@
 #balance #reason-toggle5:checked ~ .balance-layout .card5 .card-face-back {
   position: relative;
 }
+
+/* 카드 내부 디자인 */
 
 #balance .card-face-back .card-footer {
   flex-shrink: 0;
@@ -285,7 +249,8 @@
   margin-bottom: 22px;
 }
 
-/* ── Option buttons (side by side) ── */
+/*밸런스 옵션 버튼 (각 카드 - 밸런스 선지!)*/
+
 #balance .options-box {
   display: flex;
   flex-wrap: wrap;
@@ -339,7 +304,8 @@
   display: flex;
 }
 
-/* ── Card back (reason) ── */
+/*밸런스 카드 뒷면 이유*/
+
 #balance .reason-header {
   display: block;
   flex-shrink: 0;
@@ -416,7 +382,8 @@
   }
 }
 
-/* ── Card footer ── */
+/*밸런스 카드 푸터 (하단 내용)*/
+
 #balance .card-footer {
   align-items: center;
   border-top: 1px solid #eef1f4;
@@ -460,7 +427,6 @@
   width: 18px;
 }
 
-/* ── Pagination dots ── */
 #balance .balance-pagination {
   bottom: 22px;
   display: flex;
@@ -490,7 +456,8 @@
   width: 28px;
 }
 
-/* ── Responsive ── */
+/*밸런스 파트 모바일 최적화*/
+
 @media (max-width: 640px) {
   #balance .balance-layout {
   }
@@ -769,8 +736,14 @@
   width: 100%;
 }
 
-/* 🎵 플레이리스트 (Playlist) */
-.playlist-panel { background: #fff; color: #1a1a1a; padding: 0; }
+                  /* =============================== 플레이리스트 ===================================== */
+
+.playlist-panel {
+  background: #fff;
+  color: #1a1a1a; 
+  padding: 0;
+}
+
 .playlist-panel .sidebar {
   background: #f8fafc;
   border-color: #e2e8f0;
@@ -826,7 +799,8 @@
 .track-time { text-align: right; }
 .track-time-head { font-size: 16px; text-align: right; }
 
-/* 📅 캘린더 (Calendar) */
+                  /* =============================== 캘린더 ===================================== */
+
 .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); grid-auto-rows: 140px; gap: 2px; background-color: #e2e8f0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; margin-bottom: 40px; }
 .grid-header { background-color: #f8fafc; padding: 10px; text-align: center; font-size: 13px; font-weight: 600; color: #475569; height: auto; }
 .grid-day { background-color: #ffffff; padding: 8px; display: flex; flex-direction: column; gap: 4px; overflow-y: auto; box-sizing: border-box; }
@@ -845,7 +819,7 @@
 .cal-btn:hover { background-color: #f1f5f9; }
 .cal-btn.disabled { opacity: 0.3; pointer-events: none; }
 
-/* 📅 캘린더 타임라인 추가 속성 (Inline Styles 통합) */
+
 .calendar-header { display: flex; align-items: center; justify-content: space-between; }
 .calendar-header h2 { display: inline-block; margin: 0; vertical-align: middle; }
 .grid-header.sunday { color: #ef4444; }
@@ -869,7 +843,8 @@
 .timeline-content p { margin: 0; font-size: 13px; color: #64748b; }
 .timeline-item.highlight-orange .timeline-content p { color: #9a3412; font-weight: 500; }
 
-/* 📝 방명록 및 댓글 (Comments) */
+                  /* =============================== 방명록 / 댓글 ===================================== */
+                  
 .comment-list {
   display: flex;
   flex-direction: column;
@@ -917,7 +892,8 @@
 
 #message .panel h2 { font-size: 18px; margin-top: 7px; }
 
-/* 🖼️ 공통 UI 및 라이트박스 보정 (UI & Lightbox Fixes) */
+                  /* =============================== 라이트박스 ===================================== */
+
 .photo-card { cursor: pointer; }
 .user-page .modal-titlebar .traffic-dot-close { background: #ff5f57; border-radius: 50%; box-sizing: border-box; cursor: pointer; display: block; flex-shrink: 0; height: 12px; transition: transform 0.12s ease, filter 0.12s ease; width: 12px; }
 .user-page .modal-titlebar .traffic-dot-close:hover { filter: brightness(0.92); }
@@ -927,7 +903,10 @@
 .image-lightbox-prev { left: 16px; }
 .image-lightbox-next { right: 16px; }
 
-/* 📱 반응형 모바일 (Responsive Mobile) */
+
+                  /* =============================== 모바일 최적화 ===================================== */
+  /* =============================== 처음엔 % 로 접근하다가 모바일 기준으로 전체 다듬었읍니다 . . ===================================== */
+
 @media (max-width: 767px) {
   .home-stage { align-items: center; min-height: calc(100vh - 80px); padding: 88px 16px 112px; }
   .personal-folders .folder { display: flex; flex-direction: column; align-items: center; width: min(140px, 42vw); }
@@ -975,7 +954,6 @@
   .user-page #playlist .playlist-tracks .track .artist-col, .user-page #playlist .playlist-tracks .track .artist-col-head, .user-page #playlist-likes .playlist-tracks .track .artist-col, .user-page #playlist-likes .playlist-tracks .track .artist-col-head { display: none; }
   .track-title-cell, .track strong { min-width: 0; }
 
-  /* 📱 모달 다이얼로그 및 타이틀바 보정 */
   .modal-titlebar {
     gap: 10px;
     min-height: 56px;
@@ -985,8 +963,7 @@
     font-size: 16px;
     padding: 0 8px;
   }
-
-  /* 👤 프로필 모바일 보정 (인라인 스타일 덮어쓰기) */
+                  
   #profile .modal-window {
     max-height: 92dvh;
     height: 92dvh;
@@ -1000,7 +977,6 @@
     flex: 1 1 auto;
   }
 
-  /* ⚖️ 밸런스 모바일 보정 */
   #balance .balance-layout {
     min-height: auto;
     padding: 16px 12px 24px;

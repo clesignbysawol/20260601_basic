@@ -26,6 +26,45 @@
   --user-border: #dde6f3;
   --cover: linear-gradient(135deg, #5bc5ff, #0066b3);
 }
+/*--------------------------- 유저 페이지 값 조절 (최소 사이즈, 배경 색상 설정 - 각 팀원 별 색상 및 공통 색상) ---------------------------*/
+
+.user-page {
+  min-height: 100vh;
+  background: var(--user-tint);
+}
+
+.eunchan {
+  --user-color: #00b7ff;
+  --user-tint: #eef3fb;
+  --user-accent: #2f6ad9;
+  --user-border: #dde6f3;
+  --user-on-color: #fff;
+  --cover: linear-gradient(135deg, #5bc5ff, #0066b3);
+}
+.jimin {
+  --user-color: #ffff00;
+  --user-tint: #faf6e7;
+  --user-accent: #a48207;
+  --user-border: #ecdfb1;
+  --user-on-color: #111;
+  --cover: linear-gradient(135deg, #fff59a, #c8a300);
+}
+.hayoung {
+  --user-color: #0cdfff;
+  --user-tint: #eef7fc;
+  --user-accent: #0f8fc4;
+  --user-border: #dbe9f0;
+  --user-on-color: #fff;
+  --cover: linear-gradient(135deg, #7decff, #006a8c);
+}
+.gaeun {
+  --user-color: #ff4f4f;
+  --user-tint: #fbeeec;
+  --user-accent: #c14a3f;
+  --user-border: #eed1cc;
+  --user-on-color: #fff;
+  --cover: linear-gradient(135deg, #ff8a8a, #b31e1e);
+}
 
                 /*----------------------------------------- 기본 텍스트 설정 ------------------------------------------------*/
 
